@@ -1,0 +1,9 @@
+# Pliki tymczasowe Worda i systemu
+~$*.docx
+~$*.doc
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Lokalne ustawienia Claude Code (nie są częścią projektu)
+.claude/settings.local.json
