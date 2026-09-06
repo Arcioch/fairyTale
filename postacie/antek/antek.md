@@ -4,11 +4,11 @@
 
 ## W jednym zdaniu
 
-Najstarszy (razem z Zuzią, urodzeni tego samego dnia), chłopiec z milionem pomysłów na minutę, który woła „ja spróbuję!” i rusza pierwszy, ale zawsze wraca pomóc.
+Chłopiec z milionem pomysłów na minutę, który woła „ja spróbuję!” i rusza pierwszy, ale zawsze wraca pomóc.
 
 ## Metryka
 
-- **Wiek wyglądowy:** 4 lata, najstarszy w grupie (ten sam dzień urodzin co Zuzia).
+- **Wiek wyglądowy:** 4 lata. Urodzony pod koniec kwietnia 2022, trzeci w kolejności urodzin (po Zuzi i Olku, przed Adą).
 - **Rdzeń postaci:** najpierw robi, potem myśli.
 - **Rola w grupie:** pierwszy ochotnik, generator pomysłów, a przy tym strażnik dobrych manier.
 

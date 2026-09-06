@@ -1,102 +1,80 @@
-# Do zrobienia przed pierwszą bajką
+# Do zrobienia przed pierwszym odcinkiem
 
 Lista dla autorki. Odhaczaj `[x]`. Odpowiedzi wpisuj bezpośrednio w plikach wskazanych przy każdym punkcie albo tutaj pod pytaniem, a asystent przeniesie je na miejsce.
 
-Podział: sekcje A i B blokują pierwszą bajkę. C, D i E mogą poczekać, ale każda odpowiedź zmniejsza liczbę rzeczy, które bajki będą musiały omijać.
+Stan na 6 września 2026: sekcje A, B i większość E są zrobione. Można pisać pierwszy odcinek (sekcja F). Reszta to uzupełnienia na później.
 
 ---
 
-## A. Świat (blokuje) → `świat.md`
+## A. Świat → `świat.md` (zrobione)
 
-Trzy decyzje, bez których bajka nie może powiedzieć, kto z kim mieszka ani kto jest dorosłym.
-
-- [ ] **A1. Kim dla siebie jest czwórka?** Jedna z opcji albo własna:
-  - rodzeństwo (wszyscy czworo w jednym domu),
-  - dwie pary rodzeństwa (np. Ada i Antek, Olek i Zuzia),
-  - kuzyni,
-  - przyjaciele z jednej grupy w przedszkolu, każde ma własny dom.
-  Uwaga: od tego zależy, czy zostają cztery foldery domów w `miejsca/`, czy je łączymy.
-
-- [ ] **A2. Gdzie to się dzieje?** Miasto, miasteczko czy wieś. Blok czy domy z ogrodami. Czy jest w pobliżu las, rzeka, park, morze. Jedno, dwa zdania.
-
-- [ ] **A3. Czy w bajkach są dorośli?**
-  - Jeśli tak: kto (mama, tata, babcia, pani z przedszkola, sąsiad), jak mają na imię, kto jest czyj. Dla każdego jedna cecha humoru i jeden „własny cel”, który dzieci psują (wzór: `przykłady/blue/rodzice.md`).
-  - Jeśli na razie nie: wpisz „bajki bez dorosłych z imienia”. To też jest decyzja i pozwala pisać.
-
-- [ ] **A4. Czas.** Czy bajki mają kolejność (bajka 5 dzieje się po bajce 4) i wspólną porę roku, czy każda stoi osobno? Propozycja w `świat.md`: każda osobno.
-
-- [ ] **A5. Zwierzęta.** Luna jest ustalona. Czy inne dzieci mają zwierzęta? Czy Luna wychodzi z domu (może pojawić się na placu zabaw) czy jest kotem domowym?
-
-- [ ] **A6. Dalsze osoby.** Czy będzie stały sąsiad, dziadek, starsze dziecko, listonosz? Nie trzeba teraz; wystarczy „tak, później” albo „nie”.
+- [x] A1. Kim dla siebie jest czwórka: przyjaciele od żłobka, każde ma osobnych rodziców, rodziny się przyjaźnią i jeżdżą razem na wyjazdy.
+- [x] A2. Gdzie: Wrocław (celowo inne miasto niż prawdziwe). Ada w domu, reszta w blokach. Wyjazdy do godziny drogi od miasta.
+- [x] A3. Dorośli: rodzice z imienia, wymyśleni (`postacie/dorośli.md`). Panie z przedszkola: Madzia i Kasia.
+- [x] A4. Czas: każdy odcinek osobno, świat się nie cofa, pory roku różne.
+- [x] A5. Zwierzęta: Luna wychodzi z domu; inne dzieci bez zwierząt; Olek chce mieć (wątek na przyszłość).
+- [x] A7. Format: animacja 3D, własne głosy, bez narratora, ok. 9 min plus śpiewana czołówka i napisy, dwa na trzy odcinki z nauką, nauka zawsze lekko.
+- [x] A6. Pan Rysiek zostaje. Sąsiedzi, dziadkowie: później, gdy będą potrzebni.
 
 ---
 
-## B. Miejsce pierwszej bajki (blokuje) → `miejsca/<nazwa>/<nazwa>.md`
+## B. Miejsce pierwszego odcinka (blokuje) → `miejsca/<nazwa>/<nazwa>.md`
 
-Wybierz jedno miejsce, w którym dzieje się pierwsza bajka, i uzupełnij jego kartę. Najprościej **plac zabaw**, bo nie wymaga odpowiedzi na A1 i A3.
+Wybierz jedno miejsce, w którym dzieje się pierwszy odcinek, i uzupełnij jego kartę. Najprościej **plac zabaw**.
 
-- [ ] **B1. Które miejsce jest pierwsze?** ______
-
-- [ ] **B2. W karcie tego miejsca wypełnij sekcję „Jak wygląda”** (pięć punktów, każdy jedno zdanie): wejście i pierwsze wrażenie, strefy, kolory i materiały, dźwięki i zapachy, stałe rekwizyty.
-
-- [ ] **B3. Odpowiedz na „Otwarte pytania dla autora”** na końcu karty. Dla placu zabaw:
-  - Czy plac jest przy przedszkolu, przy którymś domu, czy po drodze?
-  - Czy dzieci mogą tu być bez dorosłego?
-  - Co jest na obrzeżu: drzewo, płot, krzaki, strumyk?
-
-- [ ] **B4. Zmień w nagłówku karty „Status: szkic” na „Status: ustalone”** i to samo w tabeli w `miejsca/README.md`. Asystent może to zrobić za Ciebie, jeśli napiszesz „plac zabaw ustalony”.
+- [x] B1. Pierwsze miejsce: plac zabaw w parku.
+- [x] B2. Karta placu wypełniona (wymyślona przez asystenta, zatwierdzona przez autorkę).
+- [x] B3. Pytania placu rozstrzygnięte: park, dzieci mogą być same, obrzeże wymyślone.
+- [x] B4. Status placu: ustalone.
 
 ---
 
 ## C. Pozostałe miejsca (może poczekać) → `miejsca/`
 
-Każdą kartę uzupełniasz dopiero, gdy miejsce ma być tłem bajki. Pytania są na końcu każdej karty; tu w skrócie.
+Każdą kartę uzupełniasz dopiero, gdy miejsce ma być tłem odcinka. Pytania są na końcu każdej karty.
 
-- [ ] **C1. Dom Ady** (`miejsca/dom ady/`): dom czy mieszkanie, ogród lub balkon, co jest w pokoju Ady (ściana, półka, pod łóżkiem), gdzie biega i skacze.
-- [ ] **C2. Dom Antka** (`miejsca/dom antka/`): jak wyżej, plus gdzie buduje (podłoga, stół, kąt), z czego (klocki jakiego typu), ulubione kolory Antka (w karcie postaci brak).
-- [ ] **C3. Dom Olka** (`miejsca/dom olka/`): jak wyżej, plus gdzie trzyma skarby (słoiki, pudełka, szuflada), ulubione kolory Olka.
-- [ ] **C4. Dom Zuzi** (`miejsca/dom zuzi/`): jak wyżej, plus gdzie Luna śpi, gdzie się chowa, czego się boi; okno, z którego Zuzia patrzy; ulubione kolory Zuzi.
-- [ ] **C5. Przedszkole** (`miejsca/przedszkole/`): ile grup, czy czwórka w jednej, imię pani, czy jest własny plac, czy inne dzieci z grupy mają się pojawiać z imienia (to nowe postacie).
-- [ ] **C6. Mapa okolicy** (`miejsca/README.md`): jak daleko domy od siebie, czy do przedszkola idzie się pieszo, czy plac jest po drodze. Bez tego bajka nie może „pobiec do Olka”.
-
-Jeśli w A1 wyjdzie, że część dzieci mieszka razem: napisz to, a asystent połączy foldery domów.
+- [ ] C1. Dom Ady (dom z ogrodem?): pokój Ady, gdzie biega i skacze, co jest w ogrodzie.
+- [ ] C2. Mieszkanie Antka (blok): gdzie buduje, z czego, ulubione kolory Antka, balkon?
+- [ ] C3. Mieszkanie Olka (blok): gdzie trzyma skarby, ulubione kolory Olka, szklarnia mamy w domu czy na uczelni?
+- [ ] C4. Mieszkanie Zuzi (blok): gdzie Luna śpi i którędy wychodzi (balkon? drzwi?), okno Zuzi, pracownia mamy, ulubione kolory Zuzi.
+- [ ] C5. Przedszkole: jak wygląda sala czwórki, czy jest własny plac, czy inne dzieci z grupy pojawiają się z imienia.
+- [ ] C6. Mapa okolicy (`miejsca/README.md`): jak daleko domy od siebie, czy do przedszkola idzie się pieszo, czy plac jest po drodze. Bez tego odcinek nie może „pobiec do Olka”.
+- [x] C7. Stałego miejsca wyjazdowego nie ma; każdy wyjazd inny, opis w konspekcie odcinka.
 
 ---
 
 ## D. Postacie (może poczekać) → `postacie/`
 
-- [ ] **D1. Sprawdź „Ulubione zwroty”** w czterech kartach (`postacie/ada/ada.md`, `antek/antek.md`, `olek/olek.md`, `zuzia/zuzia.md`). Skrypt sprawdza je dosłownie: jeśli w bajce ma padać „Dobra, robimy!”, w karcie musi być dokładnie ta forma. Dopisz warianty, jeśli chcesz (np. „Dobra, robimy!” i „Robimy!”).
-
-- [ ] **D2. Ulubione kolory Antka, Olka i Zuzi.** W kartach domów jest „do ustalenia”. Ada ma róż i fiolet.
-
-- [ ] **D3. Nowe postacie.** Dla każdej osoby z A3 (i A6) przygotuj folder `postacie/<imię>/` z plikiem `Postać - <Imię>.docx` wypełnionym tak jak dotychczasowe karty: rdzeń postaci, ulubione zwroty, feler, wygląd, ubiór, jak mówi, wyjątkowy detal. Dla dorosłego dodatkowo: własny cel w bajce i typ humoru. Obrazek mile widziany. Resztę robi komenda `/nowa-postac <imię>`.
-
-- [ ] **D4. Czy chcesz piąte dziecko lub „gościa”?** Dziecko spoza czwórki (nowe w przedszkolu, kuzyn na wakacjach) to dobry silnik konfliktu. Tak, nie, później.
+- [ ] D1. Sprawdź „Ulubione zwroty” w czterech kartach. Skrypt sprawdza je dosłownie w kwestiach danej postaci: jeśli w scenariuszu ma padać „Dobra, robimy!”, w karcie musi być dokładnie ta forma. Dopisz warianty, jeśli chcesz.
+- [x] D2. Kolory: Ada róż, Antek zielony, Olek niebieski, Zuzia fiolet (wpisane do kart domów i `świat.md`).
+- [ ] D3. Rodzice: przejrzyj `postacie/dorośli.md`. Jeśli chcesz coś zmienić (imię, zawód, żart), wpisz to obok. Obrazy referencyjne 3D dorosłych, jeśli powstaną, wrzuć do `postacie/<imię>/`.
+- [ ] D4. Piąte dziecko lub gość: później.
+- [x] D5. Antek: koniec kwietnia 2022.
 
 ---
 
-## E. Jak mają wyglądać bajki (może poczekać, ale warto raz odpowiedzieć)
+## E. Jak mają wyglądać odcinki (warto raz odpowiedzieć)
 
-Odpowiedzi trafią do `świat.md` lub do skilla `/bajka`.
-
-- [ ] **E1. Długość.** Ustawione: 600 do 1000 słów, 5 do 8 minut czytania. Zgoda, czy krócej lub dłużej?
-- [ ] **E2. Proporcje.** Więcej nauki (Ada Bambini, Mądroboty) czy więcej emocji i humoru (Bluey)? Wpisz np. „pół na pół” albo „dwie na trzy bajki z nauką”.
-- [ ] **E3. Dorosły w bajce mówi jak dorosły** i ma żart dla rodzica czytającego. Zgoda?
-- [ ] **E4. Rymowanki i zawołania.** Czy chcesz stały refren lub zawołanie serii (jak w serialach), które wraca w każdej bajce? Jeśli tak, jakie, albo „wymyśl trzy propozycje”.
-- [ ] **E5. Tematy, których nie chcesz.** Np. śmierć zwierzęcia, kłótnia rodziców, lekarz, ciemność. Lista albo „bez ograniczeń”.
-- [ ] **E6. Tematy, które chcesz na pewno.** Np. pierwszy dzień w przedszkolu, zgubiona zabawka, deszcz, chory kot. Choć trzy.
-- [ ] **E7. Nazwa serii** (opcjonalnie). Tytuł, pod którym bajki będą razem, np. „Czwórka z placu”.
-- [ ] **E8. Prawdziwe pierwowzory.** Jeśli postacie są wzorowane na prawdziwych dzieciach: czy są rzeczy, których bajka nie ma mówić (np. że ktoś nie umie czegoś), i czy imiona zostają.
+- [x] E1. Długość: ok. 9 min historii, 10 do 12 z czołówką i napisami.
+- [x] E2. Proporcje: dwa na trzy z nauką, nauka zawsze lekko.
+- [x] E3. Dorosły mówi jak dorosły, jeden żart dla rodzica na odcinek.
+- [ ] E4. Czołówka: okrzyk „Hopsabum!” ustalony; tekst piosenki do napisania po wyborze nazwy serii.
+- [x] E5. Tematy trudne nie na pierwszym planie; ton naturalny, nie cukierkowy (`świat.md`, „Ton i tematy”).
+- [x] E6. Tematów obowiązkowych nie ma.
+- [ ] E7. Nazwa serii: dwie tury propozycji odrzucone; wrócić po pierwszym odcinku. Autorka poda, co jej nie pasowało, i trzy nazwy z innych bajek, które lubi.
+- [x] E8. Napisy końcowe: plansza wg `świat.md`, podpis nazwą kanału.
+- [x] E9. Piosenki w odcinkach dozwolone, nie w każdym, do 8 wersów.
+- [x] E10. Luna ma dźwięki, miauknięcie bywa odpowiedzią w dialogu.
 
 ---
 
-## F. Pierwsza bajka (gdy A i B są zrobione)
+## F. Pierwszy odcinek (gdy B jest zrobione)
 
-- [ ] **F1.** W Claude Code w tym folderze wpisz `/pomysly` (albo `/pomysly plac zabaw`). Dostaniesz tabelę tematów.
-- [ ] **F2.** Wybierz numer i wpisz `/bajka <numer>`. Dostaniesz trzy konspekty, wybierz jeden.
-- [ ] **F3.** Przeczytaj `bajki/01 …/bajka.md` na głos dziecku, jeśli się da. Zapisz, gdzie się nudziło, śmiało, pytało.
-- [ ] **F4.** Wpisz `/sprawdz 01` i swoje uwagi z czytania. Poprawki.
-- [ ] **F5.** Gdy jest dobrze, napisz „bajka 01 gotowa”. Fakty z niej trafią do `bajki/kanon.md` i obowiązują dalej.
+- [ ] F1. W Claude Code w tym folderze wpisz `/pomysly` (albo `/pomysly plac zabaw`). Dostaniesz tabelę tematów.
+- [ ] F2. Wybierz numer i wpisz `/odcinek <numer>`. Dostaniesz trzy konspekty, wybierz jeden. Powstanie `odcinki/01 …/` z konspektem i scenariuszem.
+- [ ] F3. Przeczytaj scenariusz dziecku na głos z podziałem na role albo sama, jeśli się da. Zapisz, gdzie się nudziło, śmiało, pytało.
+- [ ] F4. Wpisz `/sprawdz 01` i swoje uwagi. Poprawki.
+- [ ] F5. Gdy jest dobrze, napisz „odcinek 01 gotowy”. Fakty z niego trafią do `odcinki/kanon.md` i obowiązują dalej.
 
 ---
 

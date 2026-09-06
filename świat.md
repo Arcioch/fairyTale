@@ -8,19 +8,20 @@ Jak używać: autor zmienia status na **ustalone** i wpisuje decyzję. Gdy decyz
 
 | Temat | Status | Decyzja |
 |---|---|---|
-| Kim dla siebie jest czwórka (rodzeństwo, kuzyni, grupa z przedszkola) | otwarte | |
-| Rodzice i inni dorośli (imiona, kto czyj, jaki humor) | otwarte | |
-| Miejsce akcji (miasto, miasteczko, wieś; blok czy domy) | otwarte | |
-| Czy każde dziecko ma własny dom, czy część mieszka razem | otwarte | zależy od pokrewieństwa; szkice domów są w `miejsca/` |
-| Przedszkole (czy chodzą razem, do jednej grupy, jak ma na imię pani) | otwarte | |
-| Zwierzęta (Luna jest ustalona; inne?) | częściowo | Luna, biały kotek Zuzi, karta: `postacie/zuzia/zuzia.md` |
-| Pora roku i czas (czy bajki mają kolejność, czy każda osobno) | otwarte | propozycja: każda bajka osobno, bez ciągłości poza stałymi miejscami i rekwizytami |
+| Kim dla siebie jest czwórka | ustalone | Przyjaciele, znają się od żłobka, teraz około 4 do 4,5 roku. Każde ma osobnych rodziców. Z dzieci i rodziców powstała paczka przyjaciół: spotykają się w przedszkolu i po nim, jeżdżą razem na wyjazdy weekendowe i wakacyjne. |
+| Rodzice i inni dorośli | ustalone | Rodzice są w bajkach z imienia, jako osobne, wymyślone charaktery (nie portrety prawdziwych osób). Każde dziecko ma mamę i tatę; w każdej rodzinie jeden rodzic jest „jak dziecko”, drugi „na odwrót”. Zawody nowoczesne, bez prezesów. Karty i imiona (zatwierdzone przez autorkę): `postacie/dorośli.md`. |
+| Miejsce akcji | ustalone | Wrocław (miasto wybrane celowo inne niż prawdziwe). Ada mieszka w domu, Antek, Olek i Zuzia w mieszkaniach w blokach. Świat nie zamyka się na osiedle: bajki mogą dziać się w mieście (Odra, wyspy, zoo, Hydropolis, krasnale), na wyjazdach weekendowych (ok. godziny drogi od miasta) i na wakacjach. Stałego miejsca wyjazdowego nie ma: każdy wyjazd to inne miejsce, opisane jednorazowo w konspekcie odcinka. Miejsca stałe mają karty w `miejsca/`; miejsce wyjazdowe opisuje konspekt bajki. |
+| Czy każde dziecko ma własny dom | ustalone | Tak, cztery osobne domy, szkice w `miejsca/`. |
+| Przedszkole | ustalone | Cała czwórka w jednej grupie. Dwie panie: pani Madzia i pani Kasia (charaktery w `postacie/dorośli.md`). Szczegóły miejsca: `miejsca/przedszkole/`. |
+| Zwierzęta | ustalone | Luna, biały kotek Zuzi, **wychodzi z domu**: może pojawić się na placu zabaw, u sąsiadów, na wyjeździe. Inne dzieci nie mają zwierząt. Olek bardzo chce mieć zwierzę (wątek na przyszłość, patrz niżej). |
+| Pora roku i czas | ustalone | Każda bajka stoi osobno i można je czytać w dowolnej kolejności. Świat się nie cofa: co raz ustalono (kanon), obowiązuje; kilka wątków idzie do przodu (sekcja „Wątki na przyszłość”). Pory roku różne, wręcz wskazane: śnieg, plaża, deszcz, jesień. Bajka podaje porę roku w metryce konspektu. |
 | Sąsiedzi, mentorzy, postacie dorosłe spoza rodziny | otwarte | wzór mentora: `przykłady/ada bambini naukowczyni/postacie.md` |
 
 ## Stałe, które już obowiązują
 
 - Czwórka: Ada, Antek, Olek, Zuzia. Karty i dynamika grupy w `postacie/README.md`.
-- Kolejność urodzin: Zuzia i Antek (ten sam dzień), trzy dni później Olek, na końcu Ada. Różnice wieku są tylko powodem do przekomarzania.
+- Kolejność urodzin: Zuzia (25.01.2022), Olek (28.01.2022), Antek (koniec kwietnia 2022), Ada najmłodsza. Różnice wieku są tylko powodem do przekomarzania.
+- Ulubione kolory (ważne dla wnętrz 3D): Ada róż (i fiolet wg karty), Antek zielony, Olek niebieski, Zuzia fiolet.
 - Stałe rekwizyty postaci (spinka Ady, czapka Antka, kieszenie Olka, warkoczyki i Luna Zuzi) są w `postacie/README.md`.
 - Miejsca stałe (domy, przedszkole, plac zabaw) mają karty w `miejsca/`. Bajka może dziać się tylko w miejscu, które ma kartę, albo w miejscu jednorazowym opisanym w konspekcie bajki.
 
@@ -30,3 +31,38 @@ Jak używać: autor zmienia status na **ustalone** i wpisuje decyzję. Gdy decyz
 - Zjawiska są prawdziwe. Jeśli bajka coś tłumaczy, tłumaczy to zgodnie z nauką na poziomie czterolatka (wzór: `przykłady/madroboty/nauka-katalog.md`).
 - Dorośli, jeśli się pojawiają, mówią jak dorośli, mają własny cel i własny humor (wzór: `przykłady/blue/rodzice.md`).
 - Nie ma nazw własnych z seriali wzorcowych.
+
+## Wątki na przyszłość
+
+Rzeczy, które autorka chce rozwijać w kolejnych bajkach. Nie rozstrzygamy ich w jednej bajce; każda może zrobić jeden krok.
+
+- **Olek chce mieć zwierzę.** Kroki do wykorzystania: opiekuje się Luną „na próbę”, hoduje coś w słoiku (dżdżownica, fasola, ślimak), pilnuje cudzego psa na wyjeździe, aż w końcu rodzice podejmują decyzję. Jaką, ustali autorka, gdy przyjdzie czas.
+
+## Format serii
+
+Ustalone przez autorkę we wrześniu 2026.
+
+- **Medium:** animacja 3D na YouTube. Postacie wyglądają jak na obrazach referencyjnych w `postacie/<imię>/` (np. `ada.webp`).
+- **Głosy:** każda postać mówi własnym głosem, dialogi. **Narratora nie ma.** Jeśli coś trzeba wiedzieć, ktoś to mówi albo to widać.
+- **Długość:** około 9 minut historii (cel 8,5 do 9,5). Z czołówką i napisami 10 do 12 minut.
+- **Czołówka:** wspólna, śpiewana, ta sama w każdym odcinku (`odcinki/czołówka.md`, do napisania). Nie wchodzi do scenariuszy.
+- **Proporcja:** około dwa na trzy odcinki ze zjawiskiem naukowym, jeden o emocji. W każdym nauka jest lekka: pokazana w kadrze, nie wykładana.
+- **Piosenki w odcinku:** dozwolone, nie w każdym odcinku, do 8 wersów, o zjawisku albo o tym, co dzieci właśnie robią.
+- **Dorośli:** mówią jak dorośli; w każdym odcinku z dorosłym jest jeden żart dla rodzica oglądającego, którego dziecko nie musi zrozumieć.
+- **Luna:** ma swoje dźwięki (miauczenie, mruczenie, syk) jako stały element; dzieci na nie reagują, a miauknięcie bywa „odpowiedzią” w dialogu. W scenariuszu jako didaskalium: `(Luna miauczy.)`
+- **Scenariusz:** format w `odcinki/_szablon/scenariusz.md`: sceny z nagłówkiem (miejsce, pora), didaskalia w nawiasach (co widać i słychać), kwestie `**IMIĘ:**`. Bez terminów filmowych.
+- **Jednostki:** „odcinek” to jednostka produkcji, „bajka” to historia w nim. W plikach projektu oba słowa znaczą to samo.
+
+## Ton i tematy
+
+Ustalone przez autorkę.
+
+- **Ton:** naturalny, nie cukierkowy. Dzieci się kłócą, upierają, coś im nie wychodzi; dorośli mają swoje cele i przegrywają z wdziękiem. Bez słodzenia i bez wykładu.
+- **Tematy trudne** (śmierć zwierzęcia, wizyta u lekarza, ciemność, kłótnia rodziców, choroba, zgubienie się w mieście): nie na pierwszym planie. Odcinek może się o nie otrzeć, jeśli jest to naturalne i ma wyjście w ciągu kilku ujęć; nie może być o nich. Strach nigdy nie zostaje na koniec.
+- **Tematów obowiązkowych nie ma.** Pomysły idą z `/pomysly`: zjawisko, para postaci, miejsce, pora roku.
+
+## Okrzyk, czołówka, napisy
+
+- **Okrzyk czwórki: „Hopsabum!”** Zmyślone słowo. Pochodzenie (do pokazania w czołówce albo w pierwszym odcinku): Ada chciała „hop!”, Antek dodał „bum!” (jego wieże zawsze się przewracają), Olek uznał, że coś musi być pośrodku, żeby było po równo, Zuzia powiedziała, że „sa” wygląda jak mostek. Klaszcze się w rytm: hop-sa-BUM. Luna może odpowiadać miauknięciem. W scenariuszu: `**WSZYSCY:** Hopsabum!` (jedyna dozwolona kwestia zbiorowa). Pada, gdy czwórka rusza do działania; nie częściej niż dwa razy na odcinek, żeby nie zjadł się.
+- **Nazwa serii:** do ustalenia (autorka odrzuciła pierwsze propozycje).
+- **Napisy końcowe:** plansza 15 do 20 s na stopklatce z odcinka, pod nią cicho refren czołówki. Treść: nazwa serii, numer i tytuł odcinka, „Pomysł i scenariusz: [nazwa kanału]”, animacja, muzyka, głosy (pseudonimy albo zbiorczo), rok i nazwa kanału. Bez nazwisk, bez miasta, bez imion prawdziwych dzieci poza imionami postaci.

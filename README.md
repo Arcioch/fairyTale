@@ -1,50 +1,52 @@
 # fairyTale
 
-Bajki na dobranoc dla dzieci w wieku przedszkolnym o czwórce bohaterów: Adzie, Antku, Olku i Zuzi. Repozytorium zawiera karty postaci i miejsc, analizy seriali wzorcowych, szablony i skille do pisania oraz (docelowo) gotowe bajki.
+Animowana seria 3D na YouTube dla dzieci w wieku przedszkolnym o czwórce przyjaciół: Adzie, Antku, Olku i Zuzi. Odcinek to około 9 minut historii (z czołówką i napisami 10 do 12), każda postać mówi własnym głosem, narratora nie ma. Repozytorium zawiera karty postaci i miejsc, biblię świata, analizy seriali wzorcowych, szablony i skille do pisania scenariuszy oraz (docelowo) gotowe scenariusze.
 
 ## Zawartość
 
 | Ścieżka | Co jest w środku |
 |---|---|
-| `świat.md` | biblia świata: co ustalone, co jeszcze otwarte (pokrewieństwo, dorośli, miejsce akcji) |
-| `postacie/` | karty czterech bohaterów (`.docx` od autora, `.md` do pisania), indeks grupy, szablon |
-| `miejsca/` | karty stałych miejsc: domy czwórki, przedszkole, plac zabaw (na start szkice do uzupełnienia), szablon |
-| `TODO.md` | lista pytań i zadań dla autorki przed pierwszą bajką |
-| `bajki/` | gotowe bajki i szkice, jedna na folder (`konspekt.md`, `bajka.md`, `sprawdzenie.md`), indeks, szablony, `kanon.md` z faktami ustalonymi przez gotowe bajki |
-| `narzędzia/` | `sprawdz.js`: skrypt liczący słowa, wyłapujący maniery i sprawdzający zwroty, miejsce, kanon i indeks; `hook-sprawdz.js`: uruchamia go automatycznie po każdym zapisie bajki (hook w `.claude/settings.json`) |
+| `świat.md` | biblia świata: ustalenia (przyjaciele od żłobka, Wrocław, rodzice, przedszkole, Luna), wątki na przyszłość, format serii |
+| `TODO.md` | lista pytań i zadań dla autorki |
+| `postacie/` | karty czterech bohaterów (`.docx` i obraz 3D od autorki, `.md` do pisania), `dorośli.md` z rodzicami i paniami z przedszkola, indeks grupy, szablon |
+| `miejsca/` | karty stałych miejsc: domy czwórki, przedszkole, plac zabaw, szablon |
+| `odcinki/` | scenariusze, jeden odcinek na folder (`konspekt.md`, `scenariusz.md`, `sprawdzenie.md`), indeks, szablony, `kanon.md` z faktami ustalonymi przez gotowe odcinki, `czołówka.md` |
+| `narzędzia/` | `sprawdz.js`: skrypt liczący czas, sprawdzający sceny, kwestie, maniery, zwroty z kart, miejsca, kanon i indeks; `hook-sprawdz.js`: uruchamia go automatycznie po każdym zapisie scenariusza |
 | `przykłady/` | analizy trzech seriali: „Ada Bambini, naukowczyni” (24 odcinki), „Mądroboty” (16), „Bluey” (52), każdy odcinek w osobnym folderze |
-| `.claude/skills/` | skille Claude Code: `/bajka`, `/sprawdz`, `/pomysly`, `/nowa-postac`, `/nowe-miejsce` |
+| `.claude/skills/` | skille Claude Code: `/odcinek`, `/sprawdz`, `/pomysly`, `/nowa-postac`, `/nowe-miejsce` |
 
 Instrukcje pracy w repozytorium są w `AGENTS.md`.
 
-## Jak powstaje bajka
+## Jak powstaje odcinek
 
-1. `/pomysly` daje tabelę tematów (zjawisko, para postaci, miejsce, zdarzenie).
-2. `/bajka <temat>` proponuje trzy konspekty, po wyborze pisze `konspekt.md` i `bajka.md` w `bajki/NN tytuł/`.
-3. `/sprawdz NN` najpierw uruchamia `narzędzia/sprawdz.js` (twarde liczby: słowa, maniery z numerami linii, zwroty z kart, kanon), potem recenzuje warstwami: struktura, postacie, język, prawda, a na końcu oczami czterolatka i rodzica czytającego na głos. Raport ląduje w `sprawdzenie.md`.
-4. Autor zatwierdza, status zmienia się na „gotowa”, a fakty ustalone przez bajkę trafiają do `bajki/kanon.md` i obowiązują w następnych.
+1. `/pomysly` daje tabelę tematów (zjawisko, para postaci, miejsce, pora roku, dorosły i jego cel).
+2. `/odcinek <temat>` proponuje trzy konspekty, po wyborze pisze `konspekt.md` i `scenariusz.md` w `odcinki/NN tytuł/`. Hook uruchamia skrypt sprawdzający przy każdym zapisie scenariusza.
+3. `/sprawdz NN` najpierw uruchamia `narzędzia/sprawdz.js` (twarde liczby: czas, sceny, maniery z numerami linii, zwroty z kart, kanon), potem recenzuje warstwami: struktura i czas, postacie, język i zapis, prawda, a na końcu oczami czterolatka oglądającego, rodzica oglądającego razem i aktora głosowego. Raport ląduje w `sprawdzenie.md`.
+4. Autorka zatwierdza, status zmienia się na „gotowy”, a fakty ustalone przez odcinek trafiają do `odcinki/kanon.md` i obowiązują w następnych.
 
 ## Bohaterowie w skrócie
 
-- **Ada** (najmłodsza): „Dobra, robimy!”. Działa, zanim ktoś skończy tłumaczyć.
-- **Antek** (najstarszy): „Ja spróbuję!”. Milion pomysłów na minutę, pilnuje, żeby wszyscy byli mili.
-- **Olek**: „Poczekaj, wytłumaczę.”. Chce wiedzieć, jak coś działa, i dzieli po równo. Kieszenie pełne skarbów.
-- **Zuzia** (najstarsza): „To wygląda jak…”. Widzi świat obrazami, uparta, z białym kotkiem Luną.
+- **Ada** (najmłodsza): „Dobra, robimy!”. Działa, zanim ktoś skończy tłumaczyć. Mieszka w domu.
+- **Antek**: „Ja spróbuję!”. Milion pomysłów na minutę, pilnuje, żeby wszyscy byli mili.
+- **Olek**: „Poczekaj, wytłumaczę.”. Chce wiedzieć, jak coś działa, i dzieli po równo. Kieszenie pełne skarbów. Marzy o zwierzaku.
+- **Zuzia** (najstarsza): „To wygląda jak…”. Widzi świat obrazami, uparta, z białym kotkiem Luną, która wychodzi z domu.
 
-Szczegóły i dynamika grupy: `postacie/README.md`.
+Przyjaciele od żłobka, około 4 lat, każde z własnymi rodzicami; rodziny się przyjaźnią i jeżdżą razem na wyjazdy. Szczegóły i dynamika grupy: `postacie/README.md`, dorośli: `postacie/dorośli.md`.
 
 ## Z czego się uczymy
 
 - Szkielet historii z problemem i trzema próbami: Ada Bambini.
 - Wyjaśnianie zjawisk krok po kroku: Mądroboty.
-- Dialogi rodzeństwa, humor rodziców, morał bez wykładu: Bluey.
+- Dialogi dzieci, humor rodziców, morał bez wykładu: Bluey.
 
 Indeks i wskazówki: `przykłady/README.md`.
 
 ## Stan projektu
 
-- Analizy seriali: gotowe. Pliki napisów usunięte po analizie.
-- Karty czterech postaci: gotowe. Kolejne postacie (rodzice, pani z przedszkola) dopisze autor.
-- Karty miejsc: sześć szkiców z pytaniami do autora.
-- Skille i szablony: gotowe.
-- Bajki: jeszcze nie ma. Przed pierwszą warto rozstrzygnąć punkty otwarte w `świat.md`; do tego czasu bajki ich nie dotykają.
+- Analizy seriali: gotowe.
+- Karty czterech postaci: gotowe. Rodzice i panie z przedszkola: opisani w `postacie/dorośli.md`.
+- Świat: ustalony w zakresie potrzebnym do pisania (patrz `świat.md`).
+- Karty miejsc: szkice, do uzupełnienia przez autorkę przed użyciem miejsca.
+- Skille, szablony, skrypt i hook: gotowe.
+- Czołówka: do napisania.
+- Odcinki: jeszcze nie ma.

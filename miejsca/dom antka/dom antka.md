@@ -14,7 +14,7 @@ Antek. Rodzice i inni dorośli: nie ustalone, patrz `świat.md`.
 
 - **Wejście i pierwsze wrażenie:** [do uzupełnienia].
 - **Pomieszczenia lub strefy:** [do uzupełnienia].
-- **Kolory i materiały:** do ustalenia; ulubiona czapka na haczyku, czarne trampki, pudła z klockami.
+- **Kolory i materiały:** zielony (ulubiony kolor Antka); ulubiona czapka na haczyku, czarne trampki, pudła z klockami.
 - **Dźwięki i zapachy:** [do uzupełnienia].
 - **Stałe rekwizyty:** [do uzupełnienia; propozycje w punkcie „Kolory i materiały”].
 

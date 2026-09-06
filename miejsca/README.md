@@ -13,7 +13,7 @@ Karta miejsca ma dwie połowy. Pierwsza mówi, jak miejsce wygląda (żeby opisy
 | Dom Olka | `dom olka/` | szkic | Olek | zbiory, skarby, tłumaczenie „jak to działa” |
 | Dom Zuzi | `dom zuzi/` | szkic | Zuzia (i Luna) | patrzenie, przebieranki, wyobraźnia |
 | Przedszkole | `przedszkole/` | szkic | cała czwórka | grupa, zasady, pani, sprawiedliwość |
-| Plac zabaw | `plac zabaw/` | szkic | cała czwórka | teren wspólny, spotkania, przyroda |
+| Plac zabaw (w parku) | `plac zabaw/` | ustalone | nikt, teren wspólny | wieża z bazą, pompa z wodą, bocianie gniazdo, głaz; piasek i woda, cień, wahadło, dźwięk w rurach |
 
 Statusy: **szkic** (karta ma tylko pytania i propozycje), **ustalone** (autor zatwierdził wygląd i funkcję), **w użyciu** (miejsce pojawiło się w gotowej bajce; od tej pory zmiany wymagają sprawdzenia bajek).
 

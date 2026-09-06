@@ -1,12 +1,12 @@
 ---
 name: pomysly
-description: Burza mózgów na tematy nowych bajek. Użyj, gdy autor pyta „o czym może być bajka”, „daj pomysły”, „co jeszcze nie było”, albo podaje ograniczenie (miejsce, postać, zjawisko, pora roku). Krzyżuje zjawiska z katalogu Mądrobotów z konfliktami par postaci i miejscami z kartami, zwraca tabelę pomysłów do wyboru, nic nie zapisuje.
+description: Burza mózgów na tematy nowych odcinków (bajek). Użyj, gdy autor pyta „o czym może być bajka”, „daj pomysły”, „co jeszcze nie było”, albo podaje ograniczenie (miejsce, postać, zjawisko, pora roku). Krzyżuje zjawiska z katalogu Mądrobotów z konfliktami par postaci i miejscami z kartami, zwraca tabelę pomysłów do wyboru, nic nie zapisuje.
 argument-hint: [ograniczenie: postać, miejsce, zjawisko, emocja] [--ile N]
 ---
 
 # /pomysly
 
-Zwracasz listę pomysłów na bajki, z których autor wybiera. Nie piszesz konspektu ani tekstu (to robi `/bajka`). Nie zapisujesz plików.
+Zwracasz listę pomysłów na odcinki, z których autorka wybiera. Nie piszesz konspektu ani scenariusza (to robi `/odcinek`). Nie zapisujesz plików.
 
 ## Źródła pomysłów
 
@@ -21,7 +21,7 @@ Pomysł bez zjawiska jest dozwolony (bajka o emocji w stylu Bluey), ale wtedy mu
 ## Filtry
 
 Odrzuć pomysł, jeśli:
-- dubluje temat z tabeli w `bajki/README.md`,
+- dubluje temat z tabeli w `odcinki/README.md` albo powtarza porę roku dwóch ostatnich odcinków,
 - wymaga rozstrzygnięcia czegoś, co w `świat.md` ma status „otwarte” (rodzice z imienia, wspólny dom, droga między miejscami),
 - wymaga więcej niż jednego miejsca,
 - jest przeróbką konkretnego odcinka z `przykłady/*/odcinki/` (wzory brać z `styl.md`, nie z fabuł),
@@ -33,8 +33,8 @@ Lista tematów już „zużytych” przez seriale (`przykłady/ada bambini nauko
 
 Domyślnie 8 pomysłów (lub `--ile`). Tabela:
 
-| Nr | Tytuł roboczy | Miejsce | Zjawisko lub emocja | Para na pierwszym planie | Zdarzenie wywołujące | Kto robi trzy próby | Obraz lub pytanie na koniec |
-|---|---|---|---|---|---|---|---|
+| Nr | Tytuł roboczy | Miejsce | Pora roku | Zjawisko lub emocja (co widać w kadrze) | Para na pierwszym planie | Dorosły i jego cel | Zdarzenie wywołujące | Kto robi trzy próby | Ostatni obraz |
+|---|---|---|---|---|---|---|---|---|---|
 
 Pod tabelą:
 - trzy pomysły, które polecasz, po jednym zdaniu dlaczego,
@@ -42,4 +42,4 @@ Pod tabelą:
 
 Różnicuj: nie więcej niż dwa pomysły w tym samym miejscu, każda para postaci co najmniej raz, co najmniej jeden pomysł bez zjawiska.
 
-Gdy autor wybierze numer, odpowiedz „uruchamiam `/bajka`” i przekaż mu pełen wiersz tabeli jako argument.
+Gdy autor wybierze numer, odpowiedz „uruchamiam `/odcinek`” i przekaż mu pełen wiersz tabeli jako argument.

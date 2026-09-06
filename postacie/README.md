@@ -9,11 +9,11 @@ Gdy `.docx` się zmienia, trzeba zaktualizować `.md`. Gdy dochodzi nowa postać
 | Postać | Plik | Wiek | Rdzeń | Rola w grupie | Ulubiony zwrot |
 |---|---|---|---|---|---|
 | Ada | `ada/ada.md` | 4, najmłodsza | działanie zamiast gadania | rusza pierwsza, sprawdza w praktyce | „Dobra, robimy!” |
-| Antek | `antek/antek.md` | 4, najstarszy (dzień urodzin jak Zuzia) | najpierw robi, potem myśli | ochotnik, milion pomysłów, strażnik manier | „Ja spróbuję!” |
+| Antek | `antek/antek.md` | 4, koniec kwietnia 2022 | najpierw robi, potem myśli | ochotnik, milion pomysłów, strażnik manier | „Ja spróbuję!” |
 | Olek | `olek/olek.md` | 4,5, trzy dni młodszy od Zuzi | ciekawski, analityczny, uważny na innych | tłumaczy, pilnuje sprawiedliwości | „Poczekaj, wytłumaczę.” |
-| Zuzia | `zuzia/zuzia.md` | 4, najstarsza (dzień urodzin jak Antek) | widzi świat obrazami i emocjami | patrzy inaczej, nazywa porównaniami | „To wygląda jak…” |
+| Zuzia | `zuzia/zuzia.md` | 4, najstarsza (25.01.2022) | widzi świat obrazami i emocjami | patrzy inaczej, nazywa porównaniami | „To wygląda jak…” |
 
-Kolejność urodzin: Zuzia i Antek (ten sam dzień), trzy dni później Olek, na końcu Ada. W dokumentach Olek ma „wiek wyglądowy 4,5”, pozostali „4”; w bajce cała czwórka jest w tym samym wieku przedszkolnym i różnice wieku są tylko powodem do przekomarzania („ja jestem starsza o trzy dni”).
+Kolejność urodzin: Zuzia (25.01.2022), trzy dni później Olek (28.01.2022), Antek (koniec kwietnia 2022), Ada najmłodsza. W dokumentach Olek ma „wiek wyglądowy 4,5”, pozostali „4”; w odcinkach cała czwórka ma około 4 do 4,5 roku i różnice wieku są tylko powodem do przekomarzania („ja jestem starsza o trzy dni”).
 
 ## Jak czwórka działa razem
 
@@ -40,6 +40,10 @@ Kolejność urodzin: Zuzia i Antek (ten sam dzień), trzy dni później Olek, na
 
 **Rozdzielenie Ady i Antka.** Oboje mają feler „działa, zanim ktoś wytłumaczy”. W pisaniu rozdzielamy ich tak: Ada to jedno wyzwanie, ciało i ruch, „to jest proste”. Antek to wiele pomysłów, ręce i budowanie, „a może tak?!”, plus pilnowanie uprzejmości. Szczegóły w `antek/antek.md`.
 
+## Dorośli
+
+Rodzice czwórki i panie z przedszkola (Madzia, Kasia) są opisani w `dorośli.md` w tym folderze. Imiona i charaktery zatwierdzone przez autorkę.
+
 ## Stałe rekwizyty
 
 - Ada: spinka z grzywką na bok, białe buty z kolorowymi paskami.
@@ -47,14 +51,9 @@ Kolejność urodzin: Zuzia i Antek (ten sam dzień), trzy dni później Olek, na
 - Olek: kapelusz bucket lub czapka z daszkiem, czarne trampki, kieszenie pełne skarbów (kamyki, patyczki, kapsle, piórka).
 - Zuzia: dwa warkoczyki, kolorowe spinki po obu stronach, biały kotek Luna, różowe trampki w truskawki.
 
-## Czego jeszcze nie ma w dokumentach (do uzupełnienia przez autora w `świat.md`)
+## Świat wokół postaci
 
-- Czy czwórka to rodzeństwo, kuzyni, czy grupa z przedszkola.
-- Rodzice i inni dorośli (wzór humoru rodziców jest w `przykłady/blue/rodzice.md`).
-- Miejsce akcji: dom, podwórko, przedszkole, miasto czy wieś.
-- Zwierzęta, sąsiedzi, mentorzy (wzór: `przykłady/ada bambini naukowczyni/postacie.md`).
-
-Lista z decyzjami i statusami jest prowadzona w `świat.md` w korzeniu repozytorium. Do czasu uzupełnienia w bajkach nie rozstrzygamy pokrewieństwa i nie wprowadzamy dorosłych z imienia. Domy bohaterów, przedszkole i plac zabaw mają szkice kart w `miejsca/`.
+Pokrewieństwo (przyjaciele od żłobka), miasto (Wrocław), rodzice, przedszkole i zwierzęta są ustalone w `świat.md` w korzeniu repozytorium; tam też są wątki na przyszłość (np. Olek chce mieć zwierzę). Domy bohaterów, przedszkole i plac zabaw mają karty w `miejsca/`.
 
 ## Odpowiedniki w serialach wzorcowych
 

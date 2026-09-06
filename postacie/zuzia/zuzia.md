@@ -4,11 +4,11 @@
 
 ## W jednym zdaniu
 
-Najstarsza (razem z Antkiem, ten sam dzień urodzin), cicha dziewczynka z dwoma warkoczykami i białym kotkiem Luną, która widzi świat obrazami i potrafi uprzeć się jak mało kto.
+Najstarsza w grupie, cicha dziewczynka z dwoma warkoczykami i białym kotkiem Luną, która widzi świat obrazami i potrafi uprzeć się jak mało kto.
 
 ## Metryka
 
-- **Wiek wyglądowy:** 4 lata, najstarsza w grupie (ten sam dzień urodzin co Antek, trzy dni starsza od Olka).
+- **Wiek wyglądowy:** 4 lata, najstarsza w grupie (urodzona 25.01.2022, trzy dni starsza od Olka).
 - **Rdzeń postaci:** widzi świat obrazami i emocjami.
 - **Rola w grupie:** ta, która patrzy inaczej, nazywa rzeczy porównaniami i wnosi do historii wyobraźnię.
 

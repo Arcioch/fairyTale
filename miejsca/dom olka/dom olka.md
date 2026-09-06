@@ -14,7 +14,7 @@ Olek. Rodzice i inni dorośli: nie ustalone, patrz `świat.md`.
 
 - **Wejście i pierwsze wrażenie:** [do uzupełnienia].
 - **Pomieszczenia lub strefy:** [do uzupełnienia].
-- **Kolory i materiały:** do ustalenia; kapelusz bucket przy drzwiach, słoiki i pudełka ze skarbami (kamyki, patyczki, kapsle, piórka).
+- **Kolory i materiały:** niebieski (ulubiony kolor Olka); kapelusz bucket przy drzwiach, słoiki i pudełka ze skarbami (kamyki, patyczki, kapsle, piórka).
 - **Dźwięki i zapachy:** [do uzupełnienia].
 - **Stałe rekwizyty:** [do uzupełnienia; propozycje w punkcie „Kolory i materiały”].
 

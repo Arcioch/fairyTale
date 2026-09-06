@@ -14,7 +14,7 @@ Zuzia i Luna (biały kotek). Rodzice i inni dorośli: nie ustalone, patrz `świa
 
 - **Wejście i pierwsze wrażenie:** [do uzupełnienia].
 - **Pomieszczenia lub strefy:** [do uzupełnienia].
-- **Kolory i materiały:** do ustalenia; różowe trampki w truskawki, kolorowe spinki, legowisko i miski Luny.
+- **Kolory i materiały:** fiolet (ulubiony kolor Zuzi); różowe trampki w truskawki, kolorowe spinki, legowisko i miski Luny.
 - **Dźwięki i zapachy:** [do uzupełnienia].
 - **Stałe rekwizyty:** [do uzupełnienia; propozycje w punkcie „Kolory i materiały”].
 

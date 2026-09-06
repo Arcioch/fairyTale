@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Hook PostToolUse dla Claude Code (konfiguracja w .claude/settings.json).
-// Po każdym Write/Edit pliku bajki/<NN tytuł>/bajka.md uruchamia narzędzia/sprawdz.js
+// Po każdym Write/Edit pliku odcinki/<NN tytuł>/scenariusz.md uruchamia narzędzia/sprawdz.js
 // i oddaje wynik modelowi jako dodatkowy kontekst. Dla innych plików milczy.
 // Nie zmienia żadnych plików (bez --metryka); to robią skille jawnie.
 
@@ -22,7 +22,7 @@ const sciezka =
 if (!sciezka) process.exit(0);
 
 const norm = sciezka.replace(/\\/g, "/");
-const m = norm.match(/\/bajki\/([^/]+)\/bajka\.md$/);
+const m = norm.match(/\/odcinki\/([^/]+)\/scenariusz\.md$/);
 if (!m || m[1].startsWith("_")) process.exit(0);
 
 const folder = path.dirname(sciezka);
@@ -31,9 +31,9 @@ const wynik = spawnSync(process.execPath, [skrypt, folder], { encoding: "utf8" }
 
 const tresc = (wynik.stdout || "") + (wynik.stderr ? "\n" + wynik.stderr : "");
 const naglowek =
-  "Automatyczne sprawdzenie bajki (hook, narzędzia/sprawdz.js). " +
-  "To są fakty z pliku, nie opinie. Przed zgłoszeniem bajki autorowi napraw wszystko z sekcji „Maniery”, " +
-  "„Zdania” i „Postacie i zwroty z kart” albo wpisz do notatek, dlaczego coś zostaje. " +
+  "Automatyczne sprawdzenie scenariusza (hook, narzędzia/sprawdz.js). " +
+  "To są fakty z pliku, nie opinie. Przed zgłoszeniem odcinka autorce napraw wszystko z sekcji „Maniery”, " +
+  "„Kwestie i zdania”, „Sceny” i „Postacie i zwroty z kart” albo wpisz do notatek, dlaczego coś zostaje. " +
   "Fakty z sekcji „Kanon” obowiązują.\n\n";
 
 const out = {

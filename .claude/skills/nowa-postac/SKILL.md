@@ -43,7 +43,7 @@ Dla dziecka porównaj rdzeń z czwórką: jeśli nowa postać dubluje czyjś rdz
 
 ## Krok 4. Indeks i powiązania
 
-0. Sprawdź `bajki/kanon.md`: jeśli są fakty o tej postaci (np. dorosły, który już pojawił się bez imienia), wpisz je do karty i oznacz „W karcie” = „tak”.
+0. Sprawdź `odcinki/kanon.md`: jeśli są fakty o tej postaci (np. dorosły, który już pojawił się bez imienia), wpisz je do karty i oznacz „W karcie” = „tak”.
 1. Dopisz wiersz do tabeli w `postacie/README.md` (grupa główna lub nowa sekcja „Dorośli” / „Zwierzęta”).
 2. Jeśli postać zderza się z istniejącymi w nowy sposób, uzupełnij tabelę par.
 3. Jeśli postać ma swoje miejsce (dom, sala), sprawdź `miejsca/`; jeśli miejsca nie ma, zaproponuj `/nowe-miejsce`, nie zakładaj go sam.
