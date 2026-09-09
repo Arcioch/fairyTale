@@ -11,10 +11,11 @@
 | Luna | [tak: gdzie / nie] |
 | Zjawisko | [jedno albo „brak (odcinek o emocji)”] |
 | Nowe słowo | |
+| Eksperyment | [kto z czwórki prowadzi i gdzie, np. „Olek, kuchnia Olka”; kolejność w `świat.md`; albo „brak”] |
 | Sceny | [liczba; wpisuje skrypt] |
 | Kwestie | [liczba; wpisuje skrypt] |
 | Słowa dialogu | [wpisuje skrypt] |
-| Szacowany czas | [minuty bez czołówki i napisów; wpisuje skrypt; cel 8,5 do 9,5] |
+| Szacowany czas | [minuty bez czołówki i napisów, historia plus eksperyment; wpisuje skrypt; cel 8,5 do 9,5] |
 | Konspekt | `konspekt.md` |
 
 ---
@@ -33,6 +34,14 @@
 
 (…)
 
+## Eksperyment. [Imię], [miejsce]
+
+(Co widać: dziecko u siebie w domu, rzeczy na stole. Dorosły może być w kadrze, ale nie mówi.)
+
+**OLEK:** Cześć. Zajączek z bajki umie skakać także u was. Potrzebna latarka, lusterko i ktoś dorosły.
+
+(…)
+
 ---
 
 ## Notatki
@@ -48,3 +57,4 @@
 - Luna nie mówi. Ma didaskalia: `(Luna wskakuje na ławkę.)`
 - Bez numerowania ujęć, bez terminów filmowych (zbliżenie, cięcie). Reżyser to zrobi; scenariusz mówi, co się dzieje.
 - Piosenka w odcinku (jeśli jest): blok `**PIOSENKA:**` z tekstem w osobnych wersach. Czołówka jest wspólna dla serii (`odcinki/czołówka.md`) i nie wchodzi do scenariusza.
+- Segment eksperymentu: nagłówek `## Eksperyment. Imię, miejsce` po ostatniej scenie, przed drugą linią `---` (skrypt nie liczy tego, co jest po niej). Jedno dziecko, mówi do widzów, zaczyna od didaskalium. Zjawisko to samo co w historii. 0,5 do 1,5 minuty, liczone do łącznego czasu. Zasady w `świat.md`, „Format serii”.

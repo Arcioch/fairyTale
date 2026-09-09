@@ -91,10 +91,11 @@ Liczy szacowany czas (słowa dialogu przez 140 na minutę plus 4 s na didaskaliu
 
 ## Skrót zasad pisania (pełna wersja w `/odcinek`)
 
-- Szkielet: zwykła sytuacja, zdarzenie wywołujące do 1,5 min, trzy próby (każda innej postaci, dwie nie wychodzą), rozwiązanie łączące wkłady, powrót z jedną zmianą. Razem 8,5 do 9,5 min.
+- Szkielet: zwykła sytuacja, zdarzenie wywołujące do 1,5 min, trzy próby (każda innej postaci, dwie nie wychodzą), rozwiązanie łączące wkłady, powrót z jedną zmianą. Po historii segment eksperymentu (jedno dziecko, na zmianę, mówi do widzów, to samo zjawisko; odcinek o emocji go nie ma). Razem 8,5 do 9,5 min.
+- Dorosły zawsze odpowiada dziecku, które pyta. Ciekawość, która ma wrócić później, zostaje dziecku w głowie, nie w pytaniu. W przedszkolu jedna pani na sali.
 - Ada sprawdza ciałem, Antek buduje i ma pięć pomysłów, Olek tłumaczy w krokach i dzieli po równo, Zuzia patrzy i daje porównanie. Ada i Antek nie są wymienni.
 - Jedno miejsce główne (plus najwyżej poboczne), jedno zjawisko lub emocja, jedno nowe słowo, jedna zmiana zachowania. Pora roku inna niż w ostatnich odcinkach.
-- Kwestie do 40 słów, zdania do 15. Dialog nie opisuje tego, co widać. Uczucia w ciele, nie w słowie. Jeden żart dla rodzica, w ustach dorosłego. Humor cichnie przy prawdziwym smutku.
+- Kwestie do 40 słów, zdania do 15. Dialog nie opisuje tego, co widać. Uczucia w ciele, nie w słowie. Co najmniej jeden żart dla rodzica, w ustach dorosłego; więcej takich smaczków mile widziane. Humor cichnie przy prawdziwym smutku.
 - Koniec to obraz.
 
 ## Konwencje plików

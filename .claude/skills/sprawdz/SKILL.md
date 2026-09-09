@@ -30,7 +30,9 @@ Idź warstwami. Jeśli warstwa 1 ma poważny problem, warstwy 3 do 5 rób skrót
 - Jedno miejsce główne (plus najwyżej jedno poboczne), jedno zjawisko lub jedna emocja, jedna zmiana zachowania? Wypisz je.
 - Każda próba należy do innej postaci i wynika z jej rdzenia? Dwie nie wychodzą, ale wnoszą coś do rozwiązania?
 - Rozwiązanie łączy wkłady, czy jedna postać „wygrywa”?
-- Czas ze skryptu mieści się w 8,5 do 9,5 min? Które sceny są za długie względem konspektu?
+- Czas ze skryptu (historia plus eksperyment) mieści się w 8,5 do 9,5 min? Które sceny są za długie względem konspektu?
+- Segment eksperymentu: jest (w odcinku ze zjawiskiem), prowadzi jedno dziecko zgodnie z kolejnością z `świat.md`, mówi do widzów, pokazuje to samo zjawisko rzeczami z domu, nie streszcza historii?
+- Żadne dziecko nie pyta dorosłego bez odpowiedzi? Na sali przedszkolnej jest jedna pani?
 - Zjawisko (jeśli jest) **widać w kadrze** przy każdym z trzech kroków, czy jest tylko opowiedziane?
 - Ostatnie ujęcie to obraz, nie wniosek i nie zapowiedź?
 - Scenariusz zgadza się z konspektem? Jeśli nie, które jest lepsze?

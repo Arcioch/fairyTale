@@ -5,7 +5,7 @@ Scenariusze odcinków serii i te w trakcie pisania. Odcinek to animacja 3D na Yo
 Jeden odcinek to jeden folder `NN tytuł/` (numer dwucyfrowy, spacja, tytuł po polsku) z plikami:
 
 - `konspekt.md` – szkielet: miejsce, postacie, zjawisko, zdarzenie wywołujące, trzy próby, rozwiązanie, lista scen z szacunkiem minut. Powstaje pierwszy i to jego najczęściej się poprawia.
-- `scenariusz.md` – sceny, didaskalia i kwestie, z metryką na górze.
+- `scenariusz.md` – sceny, didaskalia i kwestie, z metryką na górze; po ostatniej scenie segment `## Eksperyment` (jedno dziecko pokazuje widzom to samo zjawisko w domu; kolejność prowadzących w `świat.md`).
 - `sprawdzenie.md` – raport z `/sprawdz`, nadpisywany przy kolejnym sprawdzeniu.
 
 Szablony są w `_szablon/`. Skill `/odcinek` tworzy folder i wypełnia szablony sam. `czołówka.md` to tekst wspólnej piosenki otwierającej (do napisania raz).
@@ -20,9 +20,9 @@ node "narzędzia/sprawdz.js" NN --metryka
 
 ## Indeks
 
-| Nr | Tytuł | Miejsce | Pora roku | Postacie i dorośli | Zjawisko | Ostatni obraz | Czas | Status |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+| Nr | Tytuł | Miejsce | Pora roku | Postacie i dorośli | Zjawisko | Ostatni obraz | Eksperyment | Czas | Status |
+|---|---|---|---|---|---|---|---|---|---|
+| 01 | Kto puścił zajączka | przedszkole (sala); poboczne: dom Olka (kuchnia) | wczesna wiosna, poranek do leżakowania | Ada, Antek, Olek, Zuzia; Tomek, pani Madzia | odbicie światła od gładkich, błyszczących rzeczy (zegarek, okulary, pokrywka): zajączek | leżakowanie, zajączek z okularów pani Madzi jedzie po suficie, obok mały od kapsla Olka | Olek, kuchnia Olka | ok. 8,6 min (historia 7,2, eksperyment 1,4) | szkic |
 
 ## Statusy
 

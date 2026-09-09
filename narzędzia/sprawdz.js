@@ -10,9 +10,11 @@
 //
 // Format scenariusza (odcinki/_szablon/scenariusz.md):
 //   ## Scena N. Miejsce, pora        nagłówek sceny
+//   ## Eksperyment. Imię, miejsce    segment eksperymentu po ostatniej scenie (jedno dziecko mówi do widzów)
 //   **IMIĘ:** tekst kwestii          kwestia; imię wielkimi literami
 //   (didaskalia)                     akapit w nawiasie albo nawias na początku kwestii
 //   Narratora nie ma: każdy akapit poza nagłówkiem, kwestią i nawiasem jest błędem.
+//   Czas: historia plus eksperyment razem 8,5 do 9,5 min (świat.md, „Format serii”).
 
 const fs = require("fs");
 const path = require("path");
@@ -20,8 +22,10 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const SLOW_DIALOGU_NA_MINUTE = 140; // tempo mówienia w animacji dla dzieci
 const SEKUND_NA_DIDASKALIUM = 4;     // średni czas akcji opisanej jednym akapitem
-const MIN_MINUT = 8.5;
+const MIN_MINUT = 8.5;               // cel dla całości: historia plus eksperyment
 const MAX_MINUT = 9.5;
+const MIN_MINUT_EKSPERYMENTU = 0.5;
+const MAX_MINUT_EKSPERYMENTU = 1.5;
 const MAX_SLOW_W_ZDANIU = 15;
 const MAX_SLOW_W_KWESTII = 40;
 const MIN_SCEN = 4;
@@ -89,10 +93,13 @@ function parsuj(md) {
   const doL = idx.length >= 2 ? idx[1] : linie.length;
 
   const sceny = [];       // {nr, naglowek, linia, kwestie: [], didaskalia: [], narracja: []}
-  const kwestie = [];     // {linia, kto, tekst, scena}
-  const didaskalia = [];  // {linia, tekst, scena}
-  const narracja = [];    // akapity bez nawiasu i bez mówcy
+  const kwestie = [];     // {linia, kto, tekst, scena}  (historia)
+  const didaskalia = [];  // {linia, tekst, scena}       (historia)
+  const narracja = [];    // akapity bez nawiasu i bez mówcy (historia)
+  // segment eksperymentu: liczony osobno, po ostatniej scenie
+  const segment = { jest: false, naglowek: "", linia: 0, kwestie: [], didaskalia: [], narracja: [] };
   let biezaca = null;
+  let wSegmencie = false;
 
   for (let i = od; i < doL; i++) {
     const nr = i + 1;
@@ -102,34 +109,52 @@ function parsuj(md) {
     if ((m = l.match(/^##\s+Scena\s+(\d+)\.?\s*(.*)$/i))) {
       biezaca = { nr: Number(m[1]), naglowek: m[2].trim(), linia: nr, kwestie: [], didaskalia: [], narracja: [] };
       sceny.push(biezaca);
+      wSegmencie = false;
+      continue;
+    }
+    if ((m = l.match(/^##\s+Eksperyment\.?\s*(.*)$/i))) {
+      segment.jest = true;
+      segment.naglowek = m[1].trim();
+      segment.linia = nr;
+      wSegmencie = true;
+      biezaca = null;
       continue;
     }
     if (/^#/.test(l)) continue; // inne nagłówki (np. Zasady zapisu w szablonie)
+    const scenaNr = wSegmencie ? "E" : (biezaca ? biezaca.nr : 0);
+    const listaK = wSegmencie ? segment.kwestie : kwestie;
+    const listaD = wSegmencie ? segment.didaskalia : didaskalia;
+    const listaN = wSegmencie ? segment.narracja : narracja;
     if ((m = l.match(/^\*\*([^*:]+):\*\*\s*(.*)$/))) {
       const kto = m[1].trim();
       let tekst = m[2].trim();
       // didaskalium na początku kwestii
       const d = tekst.match(/^\((.*?)\)\s*(.*)$/);
       if (d) {
-        didaskalia.push({ linia: nr, tekst: d[1], scena: biezaca ? biezaca.nr : 0 });
+        listaD.push({ linia: nr, tekst: d[1], scena: scenaNr, segment: wSegmencie });
         tekst = d[2];
       }
-      const k = { linia: nr, kto, tekst, scena: biezaca ? biezaca.nr : 0 };
-      kwestie.push(k);
+      const k = { linia: nr, kto, tekst, scena: scenaNr, segment: wSegmencie };
+      listaK.push(k);
       if (biezaca) biezaca.kwestie.push(k);
       continue;
     }
     if (/^\(.*\)\s*$/.test(l.trim())) {
-      const d = { linia: nr, tekst: l.trim().slice(1, -1), scena: biezaca ? biezaca.nr : 0 };
-      didaskalia.push(d);
+      const d = { linia: nr, tekst: l.trim().slice(1, -1), scena: scenaNr, segment: wSegmencie };
+      listaD.push(d);
       if (biezaca) biezaca.didaskalia.push(d);
       continue;
     }
-    const n = { linia: nr, tekst: l.trim(), scena: biezaca ? biezaca.nr : 0 };
-    narracja.push(n);
+    const n = { linia: nr, tekst: l.trim(), scena: scenaNr, segment: wSegmencie };
+    listaN.push(n);
     if (biezaca) biezaca.narracja.push(n);
   }
-  return { metryka, sceny, kwestie, didaskalia, narracja, od, doL, linie };
+  return { metryka, sceny, kwestie, didaskalia, narracja, segment, od, doL, linie };
+}
+
+function minutyZ(kw, did) {
+  const slowa = kw.reduce((a, k) => a + liczSlowa(k.tekst), 0);
+  return Math.round(((slowa / SLOW_DIALOGU_NA_MINUTE) + (did.length * SEKUND_NA_DIDASKALIUM) / 60) * 10) / 10;
 }
 
 // ---------- karty ----------
@@ -202,22 +227,30 @@ function main() {
   const nn = (nazwa.match(/^(\d+)/) || [null, "??"])[1].padStart(2, "0");
   const plik = path.join(folder, "scenariusz.md");
   const md = czytaj(plik);
-  const { metryka, sceny, kwestie, didaskalia, narracja } = parsuj(md);
+  const { metryka, sceny, kwestie, didaskalia, narracja, segment } = parsuj(md);
   const out = [];
   const p = (s = "") => out.push(s);
 
   p(`# Sprawdzenie skryptem: ${nazwa}`);
   p();
 
-  // 1. czas
-  const slowaDialogu = kwestie.reduce((a, k) => a + liczSlowa(k.tekst), 0);
-  const minuty = Math.round(((slowaDialogu / SLOW_DIALOGU_NA_MINUTE) + (didaskalia.length * SEKUND_NA_DIDASKALIUM) / 60) * 10) / 10;
+  // 1. czas (historia i eksperyment osobno, cel dla sumy)
+  const slowaHistorii = kwestie.reduce((a, k) => a + liczSlowa(k.tekst), 0);
+  const slowaSegmentu = segment.kwestie.reduce((a, k) => a + liczSlowa(k.tekst), 0);
+  const slowaDialogu = slowaHistorii + slowaSegmentu;
+  const minutyHistorii = minutyZ(kwestie, didaskalia);
+  const minutySegmentu = segment.jest ? minutyZ(segment.kwestie, segment.didaskalia) : 0;
+  const minuty = Math.round((minutyHistorii + minutySegmentu) * 10) / 10;
   const status = metryka["Status"] || "?";
   p(`## Czas`);
-  p(`- Sceny: ${sceny.length}, kwestie: ${kwestie.length}, didaskalia: ${didaskalia.length}, słowa dialogu: ${slowaDialogu}.`);
-  p(`- Szacowany czas historii: ok. ${minuty} min (dialog ${SLOW_DIALOGU_NA_MINUTE} słów/min + ${SEKUND_NA_DIDASKALIUM} s na didaskalium). Cel: ${MIN_MINUT} do ${MAX_MINUT} min bez czołówki i napisów.`);
+  p(`- Historia: ${sceny.length} scen, ${kwestie.length} kwestii, ${didaskalia.length} didaskaliów, ${slowaHistorii} słów dialogu, ok. ${minutyHistorii} min.`);
+  if (segment.jest) p(`- Eksperyment: ${segment.kwestie.length} kwestii, ${segment.didaskalia.length} didaskaliów, ${slowaSegmentu} słów, ok. ${minutySegmentu} min (cel ${MIN_MINUT_EKSPERYMENTU} do ${MAX_MINUT_EKSPERYMENTU}).`);
+  else p(`- Eksperymentu nie ma (nagłówek „## Eksperyment. Imię, miejsce” po ostatniej scenie).`);
+  p(`- Szacowany czas całości: ok. ${minuty} min (dialog ${SLOW_DIALOGU_NA_MINUTE} słów/min + ${SEKUND_NA_DIDASKALIUM} s na didaskalium). Cel: ${MIN_MINUT} do ${MAX_MINUT} min bez czołówki i napisów, historia plus eksperyment.`);
   if (minuty < MIN_MINUT) p(`- UWAGA: za krótko o ok. ${Math.round((MIN_MINUT - minuty) * 10) / 10} min.`);
   if (minuty > MAX_MINUT) p(`- UWAGA: za długo o ok. ${Math.round((minuty - MAX_MINUT) * 10) / 10} min.`);
+  if (segment.jest && minutySegmentu > MAX_MINUT_EKSPERYMENTU) p(`- UWAGA: eksperyment za długi o ok. ${Math.round((minutySegmentu - MAX_MINUT_EKSPERYMENTU) * 10) / 10} min.`);
+  if (segment.jest && minutySegmentu < MIN_MINUT_EKSPERYMENTU) p(`- UWAGA: eksperyment krótszy niż ${MIN_MINUT_EKSPERYMENTU} min.`);
   p(`- Status w metryce: ${status}`);
   p();
 
@@ -237,22 +270,53 @@ function main() {
     const min = Math.round(((slowa / SLOW_DIALOGU_NA_MINUTE) + (s.didaskalia.length * SEKUND_NA_DIDASKALIUM) / 60) * 10) / 10;
     p(`- Scena ${s.nr} (linia ${s.linia}): „${s.naglowek}”, ${s.kwestie.length} kwestii, ok. ${min} min${problemy.length ? ". PROBLEMY: " + problemy.join("; ") : ""}`);
   });
-  if (narracja.length) {
-    p(`- NARRACJA POZA NAWIASEM (${narracja.length}); narratora nie ma, akapit musi być kwestią albo didaskalium w nawiasie:`);
-    for (const n of narracja.slice(0, 15)) p(`  - linia ${n.linia}: ${n.tekst.slice(0, 90)}`);
+  const calaNarracja = [...narracja, ...segment.narracja];
+  if (calaNarracja.length) {
+    p(`- NARRACJA POZA NAWIASEM (${calaNarracja.length}); narratora nie ma, akapit musi być kwestią albo didaskalium w nawiasie:`);
+    for (const n of calaNarracja.slice(0, 15)) p(`  - linia ${n.linia}: ${n.tekst.slice(0, 90)}`);
   }
   p();
 
-  // 3. kwestie i zdania
+  // 2b. eksperyment
+  const postacieMetryki = (metryka["Postacie"] || "Ada, Antek, Olek, Zuzia").split(",").map((s) => s.trim()).filter(Boolean);
+  const eksperymentMetryka = (metryka["Eksperyment"] || "").trim();
+  p(`## Eksperyment`);
+  if (!segment.jest) {
+    if (eksperymentMetryka && !/^brak/i.test(eksperymentMetryka)) p(`- Metryka zapowiada eksperyment („${eksperymentMetryka}”), ale w pliku nie ma nagłówka „## Eksperyment”.`);
+    else p(`- Brak segmentu. Odcinek ze zjawiskiem powinien go mieć (świat.md, „Format serii”).`);
+  } else {
+    const problemy = [];
+    if (!segment.naglowek) problemy.push("nagłówek bez imienia i miejsca (oczekiwane „Imię, miejsce”)");
+    else if (!/,/.test(segment.naglowek)) problemy.push("nagłówek bez miejsca (oczekiwane „Imię, miejsce”)");
+    const pierwszy = [...segment.kwestie, ...segment.didaskalia].sort((a, b) => a.linia - b.linia)[0];
+    if (pierwszy && segment.kwestie.includes(pierwszy)) problemy.push("segment zaczyna się od kwestii, nie od didaskalium (co widać?)");
+    const mowcySeg = Array.from(new Set(segment.kwestie.map((k) => k.kto.toUpperCase())));
+    if (!mowcySeg.length) problemy.push("segment bez kwestii");
+    if (mowcySeg.length > 1) problemy.push(`w segmencie mówi więcej niż jedna osoba (${mowcySeg.map(tytulowe).join(", ")}); prowadzi jedno dziecko`);
+    const prowadzacy = mowcySeg[0] ? tytulowe(mowcySeg[0]) : "";
+    if (prowadzacy && !postacieMetryki.some((x) => x.toUpperCase() === prowadzacy.toUpperCase())) problemy.push(`prowadzi „${prowadzacy}”, a segment prowadzi jedno z czwórki`);
+    if (eksperymentMetryka && prowadzacy && !eksperymentMetryka.toUpperCase().includes(prowadzacy.toUpperCase())) problemy.push(`metryka mówi „${eksperymentMetryka}”, a w segmencie mówi ${prowadzacy}`);
+    if (!eksperymentMetryka || /^brak/i.test(eksperymentMetryka)) problemy.push("metryka nie ma wiersza „Eksperyment” z imieniem i miejscem");
+    if (segment.linia && sceny.length && segment.linia < sceny[sceny.length - 1].linia) problemy.push("segment jest przed ostatnią sceną; ma być po niej (albo tuż przed końcem jako zmiana otoczenia, ale wtedy wpisz to w notatkach)");
+    p(`- Segment (linia ${segment.linia}): „${segment.naglowek}”, prowadzi ${prowadzacy || "?"}, ${segment.kwestie.length} kwestii, ok. ${minutySegmentu} min${problemy.length ? ". PROBLEMY: " + problemy.join("; ") : ""}`);
+    const doWidza = segment.kwestie.some((k) => /\b(wy|was|wam|wasz\p{L}*|u was|spróbujcie|zróbcie|weźcie|potrzebujecie|cześć)\b/iu.test(k.tekst));
+    p(`- Mówi do widzów (wy, was, spróbujcie): ${doWidza ? "tak" : "NIE (segment zwraca się do oglądających)"}`);
+    const dorosly = segment.kwestie.some((k) => /dorosł|mam[aąę]|tat[aąę]|rodzic/iu.test(k.tekst)) || segment.didaskalia.some((d) => /dorosł|mam[aąę]|tat[aąę]|rodzic|Tomek|Agata|Kinga|Bartek|Natalia|Kuba|Iga|Szymon/u.test(d.tekst));
+    p(`- Dorosły zaznaczony (słowem lub w didaskalium): ${dorosly ? "tak" : "NIE"}`);
+  }
+  p();
+
+  // 3. kwestie i zdania (historia plus eksperyment)
   p(`## Kwestie i zdania`);
   const mowcy = {};
-  for (const k of kwestie) {
+  const wszystkieKwestie = [...kwestie, ...segment.kwestie];
+  for (const k of wszystkieKwestie) {
     const key = k.kto.toUpperCase();
     mowcy[key] = mowcy[key] || { kwestie: 0, slowa: 0 };
     mowcy[key].kwestie++;
     mowcy[key].slowa += liczSlowa(k.tekst);
   }
-  const postacie = (metryka["Postacie"] || "Ada, Antek, Olek, Zuzia").split(",").map((s) => s.trim()).filter(Boolean);
+  const postacie = postacieMetryki;
   const dorosliMetryka = (metryka["Dorośli"] || "").split(",").map((s) => s.trim()).filter((s) => s && !/^brak/i.test(s));
   const znani = new Set([...postacie, ...dorosli()].map((s) => s.toUpperCase()));
   const dozwoleni = new Set([...postacie, ...dorosliMetryka].map((s) => s.toUpperCase().replace(/^(PANI|PAN)\s+/, "")));
@@ -266,15 +330,15 @@ function main() {
     else if (!znani.has(czysty)) p(`- NIEZNANY MÓWCA „${tytulowe(key)}” (${mowcy[key].kwestie} kw.): nie ma go w kartach postaci ani w dorośli.md.`);
     else if (!dozwoleni.has(czysty)) p(`- Mówca „${tytulowe(key)}” nie jest wpisany w metryce (Postacie / Dorośli).`);
   }
-  for (const imie of postacie) if (!mowcy[imie.toUpperCase()]) p(`- ${imie} jest w metryce, ale nie ma ani jednej kwestii.`);
-  const dlugieKw = kwestie.filter((k) => liczSlowa(k.tekst) > MAX_SLOW_W_KWESTII);
+  for (const imie of postacie) if (!kwestie.some((k) => k.kto.toUpperCase() === imie.toUpperCase())) p(`- ${imie} jest w metryce, ale nie ma ani jednej kwestii w historii.`);
+  const dlugieKw = wszystkieKwestie.filter((k) => liczSlowa(k.tekst) > MAX_SLOW_W_KWESTII);
   if (dlugieKw.length) {
     p(`- Kwestie dłuższe niż ${MAX_SLOW_W_KWESTII} słów (monolog; rozbij działaniem) (${dlugieKw.length}):`);
     for (const k of dlugieKw) p(`  - linia ${k.linia}, ${tytulowe(k.kto)} (${liczSlowa(k.tekst)} słów)`);
   }
   const dlugieZd = [];
   let zdan = 0, sumaZd = 0;
-  for (const k of kwestie) {
+  for (const k of wszystkieKwestie) {
     for (const z of k.tekst.split(/(?<=[.!?…])\s+/u)) {
       const n = liczSlowa(z);
       if (!n) continue;
@@ -287,26 +351,34 @@ function main() {
     p(`- Zdania dłuższe niż ${MAX_SLOW_W_ZDANIU} słów (${dlugieZd.length}):`);
     for (const d of dlugieZd) p(`  - linia ${d.linia}, ${tytulowe(d.kto)} (${d.n}): ${d.z}`);
   }
-  const wykrz = kwestie.filter((k) => (k.tekst.match(/!/g) || []).length > 1).map((k) => k.linia);
+  const wykrz = wszystkieKwestie.filter((k) => (k.tekst.match(/!/g) || []).length > 1).map((k) => k.linia);
   if (wykrz.length) p(`- Więcej niż jeden wykrzyknik w kwestii: linie ${wykrz.join(", ")}`);
-  const wielokr = kwestie.filter((k) => /\.\.\.|…/.test(k.tekst)).map((k) => k.linia);
+  const wielokr = wszystkieKwestie.filter((k) => /\.\.\.|…/.test(k.tekst)).map((k) => k.linia);
   if (wielokr.length) p(`- Wielokropki w kwestiach: linie ${wielokr.join(", ")}`);
-  const didWykrz = didaskalia.filter((d) => /!/.test(d.tekst)).map((d) => d.linia);
+  const wszystkieDidaskalia = [...didaskalia, ...segment.didaskalia];
+  const didWykrz = wszystkieDidaskalia.filter((d) => /!/.test(d.tekst)).map((d) => d.linia);
   if (didWykrz.length) p(`- Wykrzykniki w didaskaliach: linie ${didWykrz.join(", ")}`);
   p();
 
-  // 4. maniery
+  // 4. maniery (w segmencie eksperymentu wolno mówić do widza i mówić, co się robi)
   p(`## Maniery (z maniery.md)`);
   let trafien = 0;
   const zrodla = [
     ...kwestie.map((k) => ({ linia: k.linia, tekst: k.tekst, typ: "dialog" })),
     ...didaskalia.map((d) => ({ linia: d.linia, tekst: d.tekst, typ: "didaskalia" })),
     ...narracja.map((n) => ({ linia: n.linia, tekst: n.tekst, typ: "narracja" })),
+    ...segment.kwestie.map((k) => ({ linia: k.linia, tekst: k.tekst, typ: "eksperyment" })),
+    ...segment.didaskalia.map((d) => ({ linia: d.linia, tekst: d.tekst, typ: "eksperyment, didaskalia" })),
+    ...segment.narracja.map((n) => ({ linia: n.linia, tekst: n.tekst, typ: "eksperyment, narracja" })),
   ];
+  const wolneWSegmencie = /pytanie do widza|opisuje to, co widać/;
   for (const [etykieta, wzor] of MANIERY) {
     const re = new RegExp(wzor, "giu");
     const lista = [];
-    for (const z of zrodla) for (const m of z.tekst.matchAll(re)) lista.push(`${z.linia} (${z.typ}): „${m[0]}”`);
+    for (const z of zrodla) {
+      if (z.typ.startsWith("eksperyment") && wolneWSegmencie.test(etykieta)) continue;
+      for (const m of z.tekst.matchAll(re)) lista.push(`${z.linia} (${z.typ}): „${m[0]}”`);
+    }
     if (lista.length) { trafien += lista.length; p(`- ${etykieta} (${lista.length}): ${lista.join("; ")}`); }
   }
   if (!trafien) p(`- Brak trafień.`);
@@ -318,7 +390,7 @@ function main() {
   for (const imie of postacie) {
     const zw = zwrotyPostaci(imie);
     if (zw === null) { p(`- ${imie}: BRAK KARTY w postacie/`); continue; }
-    const wlasne = kwestie.filter((k) => k.kto.toUpperCase() === imie.toUpperCase()).map((k) => k.tekst.toLowerCase()).join("\n");
+    const wlasne = wszystkieKwestie.filter((k) => k.kto.toUpperCase() === imie.toUpperCase()).map((k) => k.tekst.toLowerCase()).join("\n");
     const uzyte = zw.filter((z) => wlasne.includes(z.toLowerCase()));
     if (!zw.length) p(`- ${imie}: karta nie ma listy zwrotów.`);
     else if (!uzyte.length) p(`- ${imie}: ŻADEN zwrot z karty nie padł w jej/jego kwestiach (${zw.map((z) => `„${z}”`).join(", ")}).`);
@@ -338,7 +410,7 @@ function main() {
     if (!wymagany) continue;
     let jest;
     if (re) jest = re.test(calosc);
-    else jest = kwestie.some((k) => k.kto.toUpperCase() === "ANTEK" && /proszę|dziękuję|przepraszam/iu.test(k.tekst));
+    else jest = wszystkieKwestie.some((k) => k.kto.toUpperCase() === "ANTEK" && /proszę|dziękuję|przepraszam/iu.test(k.tekst));
     p(`- detal ${nazwaD}: ${jest ? "jest" : "BRAK"}`);
   }
   p();
@@ -360,6 +432,12 @@ function main() {
     if (!zadeklarowane.some((z) => ms.includes(z) || z.includes(ms))) p(`- Scena w miejscu „${ms}”, którego nie ma w metryce (główne/poboczne).`);
   }
   if (miejscaScen.size > 2) p(`- UWAGA: ${miejscaScen.size} różnych miejsc w scenach; odcinek wytrzymuje dwa.`);
+  if (segment.jest && /,/.test(segment.naglowek)) {
+    const ms = segment.naglowek.split(",").slice(1).join(",").trim();
+    const k = kartaMiejsca(ms);
+    if (k) p(`- Miejsce eksperymentu „${ms}”: karta ${k.sciezka} (status: ${k.status}); nie liczy się do dwóch miejsc historii.`);
+    else p(`- Miejsce eksperymentu „${ms}”: BRAK karty w miejsca/ (dom prowadzącego dziecka powinien ją mieć).`);
+  }
   p();
 
   // 7. kanon
@@ -381,7 +459,12 @@ function main() {
   p();
 
   // 9. metryka
-  const wpisy = [["Sceny", String(sceny.length)], ["Kwestie", String(kwestie.length)], ["Słowa dialogu", String(slowaDialogu)], ["Szacowany czas", `ok. ${minuty} min`]];
+  const wpisy = [
+    ["Sceny", String(sceny.length)],
+    ["Kwestie", segment.jest ? `${wszystkieKwestie.length} (historia ${kwestie.length}, eksperyment ${segment.kwestie.length})` : String(kwestie.length)],
+    ["Słowa dialogu", segment.jest ? `${slowaDialogu} (historia ${slowaHistorii}, eksperyment ${slowaSegmentu})` : String(slowaDialogu)],
+    ["Szacowany czas", segment.jest ? `ok. ${minuty} min (historia ${minutyHistorii}, eksperyment ${minutySegmentu})` : `ok. ${minuty} min`],
+  ];
   if (flagi.has("--metryka")) {
     let nowy = md, zmian = 0;
     for (const [klucz, wartosc] of wpisy) {
