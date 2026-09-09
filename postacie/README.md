@@ -42,14 +42,18 @@ Kolejność urodzin: Zuzia (25.01.2022), trzy dni później Olek (28.01.2022), A
 
 ## Dorośli
 
-Rodzice czwórki i panie z przedszkola (Madzia, Kasia) są opisani w `dorośli.md` w tym folderze. Imiona i charaktery zatwierdzone przez autorkę.
+Rodzice czwórki i panie z przedszkola (Madzia, Kasia) są opisani w `dorośli.md` w tym folderze. Imiona i charaktery zatwierdzone przez autorkę. Dorosły, który gra w odcinku więcej niż jedną scenę, dostaje własny folder i pełną kartę:
+
+| Postać | Plik | Kim jest | Rdzeń | Ulubiony zwrot |
+|---|---|---|---|---|
+| Tomek | `tomek/tomek.md` | tata Olka | gaduła, roztrzepany | „Alarm. Zegarek uciekł.” |
 
 ## Stałe rekwizyty
 
 - Ada: spinka z grzywką na bok, białe buty z kolorowymi paskami.
 - Antek: ulubiona czapka, czarne trampki.
 - Olek: kapelusz bucket lub czapka z daszkiem, czarne trampki, kieszenie pełne skarbów (kamyki, patyczki, kapsle, piórka).
-- Zuzia: dwa warkoczyki, kolorowe spinki po obu stronach, biały kotek Luna, różowe trampki w truskawki.
+- Zuzia: dwa warkoczyki, kolorowe spinki po obu stronach, biała kotka Luna (ragdoll, niebieskie oczy), różowe trampki w truskawki.
 
 ## Świat wokół postaci
 

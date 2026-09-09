@@ -1,6 +1,6 @@
 # Olek
 
-Źródło: `Postać - Olek.docx`.
+Źródło: `Postać - Olek.docx`. Kanon wyglądu: `olek-kanon.png`, obrót `olek-obrot.png`, miny `olek-miny.png` (sekcja „Runway” na końcu).
 
 ## W jednym zdaniu
 
@@ -83,3 +83,39 @@ Kieszenie pełne skarbów: kamyków, patyczków, kapsli, piórek. Na każdą syt
 **Czego unikać.** Olek nie jest „profesorkiem” ani mądralą. Nie poprawia innych dla zasady, tylko dlatego, że naprawdę go ciekawi. Nie jest też bierny: skacze, wspina się, jeździ na rowerze. Spokój nie znaczy siedzenie w kącie.
 
 **Kontrola przy pisaniu.** W scenach z Olkiem: co najmniej jedno „Ej, patrzcie!”, „Mam pomysł.”, „Już wiem!” lub „Poczekaj, wytłumaczę.”. Raz w odcinku coś wyjmuje z kieszeni. Raz w odcinku dba o to, żeby było po równo albo żeby nikt nie został z boku. Jeśli w bajce jest wyjaśnienie zjawiska, to najczęściej Olek je zaczyna, ale nie kończy sam: reszta dopowiada praktyką (Ada), pomysłem (Antek) albo obrazem (Zuzia).
+
+---
+
+## Runway
+
+Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski`): <https://app.runwayml.com/video-tools/teams/parciszewski/ai-tools/projects/d6ee41e5-b5ee-4ad3-9f3b-aaec64b0ae4f>
+
+**Referencje projektu** (panel „References”, w promptach wywoływane przez `@nazwa`):
+
+| Referencja | Co to jest | Plik w repo | Asset w projekcie |
+|---|---|---|---|
+| `@olek` | obraz kanoniczny: cała sylwetka, trzy czwarte, neutralne tło, bez nakrycia głowy | `olek-kanon.png` | `olek-kanon` |
+| `@olek_obrot` | obrót: przód, bok, tył | `olek-obrot.png` | `olek-obrot` |
+| `@olek_miny` | plansza sześciu min: spokój z dołeczkiem, ciekawość, „Ej, patrzcie!”, namysł, smutek, mina niejadka | `olek-miny.png` | `olek-miny` |
+
+Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd podkreślenia. Nazwy assetów w bibliotece mogą mieć myślniki.
+
+**Zasada.** Każdy nowy obraz lub ujęcie z Olkiem generuje się z referencją `@olek` (do scen zbiorowych także z `@olek_obrot`), nigdy z samego opisu tekstowego. Obrót i miny powstały z kanonu.
+
+**Nakrycie głowy.** Kanon jest bez czapki (decyzja z 2026-09-09). Karta mówi, że czapka z daszkiem lub kapelusz bucket to stały element; do scen w czapce trzeba osobnej referencji (do zrobienia, gdy autorka potwierdzi, kiedy Olek ją nosi).
+
+**Identyfikatory zadań Runway** (do użycia w MCP jako `referenceImages[].taskId`):
+
+- kanon: `1a3f952d-c1d5-4eea-9cc5-53020c231356`
+- obrót: `bab0d9a5-9f4a-4571-8232-49155598ec59`
+- miny: `73c665e3-bfd7-4c46-8b0e-8bbd0c740701`
+
+Model: Nano Banana Pro. Olek nie miał obrazu bazowego od autorki; kanon powstał z opisu w karcie z kanonem Ady jako wzorcem stylu, najpierw w kapeluszu bucket (zaakceptowany wygląd), potem bez kapelusza (wersja kanoniczna, wariant B z dwóch).
+
+**Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Olka w nowych ujęciach; zawsze razem z referencją):
+
+> @olek, a 4-and-a-half-year-old boy in the same 3D animated style as @ada, the tallest of his friends, slim. Fair light skin with slight rosy cheeks and a dimple in his left cheek. Light blonde, softly curly hair: short on the sides, longer on top, loose curls falling onto his forehead in an artful mess. Oval face, blue eyes. Loose oversized dark navy-blue hoodie, black leggings, plain black low-top canvas skate sneakers with white soles. One hoodie pocket bulges with small treasures (a pebble and a feather peeking out). No logos, no text.
+
+Referencje `@olek`, `@olek_obrot`, `@olek_miny` są w panelu References projektu (dodane przez Chrome 2026-09-09). Assety w folderze projektu nazywają się `olek-kanon`, `olek-obrot`, `olek-miny`.
+
+**Historia.** Warianty w kapeluszu i wariant A bez kapelusza (2026-09-09) zostały odrzucone i usunięte z Runway.

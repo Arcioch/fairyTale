@@ -1,6 +1,6 @@
 # Antek
 
-Źródło: `Postać - Antek.docx`.
+Źródło: `Postać - Antek.docx`. Kanon wyglądu: `antek-kanon.png`, obrót `antek-obrot.png`, miny `antek-miny.png` (sekcja „Runway” na końcu).
 
 ## W jednym zdaniu
 
@@ -83,3 +83,39 @@ Ulubiona czapka na głowie i „milion pomysłów na minutę”. Uwielbia być p
 **Czego unikać.** Antek nie jest chaotycznym rozrabiaką ani „policjantem” grupy. Zasady przypomina łagodnie, nie skarży. Nie należy go też mylić z Adą: jego energia idzie w ręce i głowę (budowanie, pomysły), jej w nogi (ruch, wyzwania).
 
 **Kontrola przy pisaniu.** W scenach z Antkiem: co najmniej jedno „Ja spróbuję!”, „Dobra, patrzcie!” lub „A może tak?!”. Raz w odcinku rzuca pomysł, którego nie kończy. Raz w odcinku wraca po kogoś lub przypomina o uprzejmości.
+
+---
+
+## Runway
+
+Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski`): <https://app.runwayml.com/video-tools/teams/parciszewski/ai-tools/projects/d6ee41e5-b5ee-4ad3-9f3b-aaec64b0ae4f>
+
+**Referencje projektu** (panel „References”, w promptach wywoływane przez `@nazwa`):
+
+| Referencja | Co to jest | Plik w repo | Asset w projekcie |
+|---|---|---|---|
+| `@antek` | obraz kanoniczny: cała sylwetka, trzy czwarte, pięść w górze, neutralne tło, bez czapki | `antek-kanon.png` | `antek-kanon` |
+| `@antek_obrot` | obrót: przód, bok, tył | `antek-obrot.png` | `antek-obrot` |
+| `@antek_miny` | plansza sześciu min: uśmiech, „Ja spróbuję!”, nowy pomysł, troska, „bądź miły” z założonymi rękami, smutek | `antek-miny.png` | `antek-miny` |
+
+Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd podkreślenia. Nazwy assetów w bibliotece mogą mieć myślniki.
+
+**Zasada.** Każdy nowy obraz lub ujęcie z Antkiem generuje się z referencją `@antek` (do scen zbiorowych także z `@antek_obrot`), nigdy z samego opisu tekstowego. Obrót i miny powstały z kanonu.
+
+**Czapka.** Kanon jest bez czapki (decyzja z 2026-09-09), choć karta mówi o ulubionej czapce jako wyjątkowym detalu. Do scen w czapce trzeba osobnej referencji (czarna czapka z daszkiem; do zrobienia, gdy autorka potwierdzi, kiedy Antek ją nosi).
+
+**Identyfikatory zadań Runway** (do użycia w MCP jako `referenceImages[].taskId`):
+
+- kanon: `7a6e0168-b19f-4ec8-9c4b-ff17c4ae0fec`
+- obrót: `39dd4654-4769-48b9-94aa-e7a4e24eae4b`
+- miny: `e0e41363-6193-4090-a126-fef58c024007`
+
+Model: Nano Banana Pro. Antek nie miał obrazu bazowego od autorki; kanon powstał z opisu w karcie z kanonami Ady i Olka jako wzorcem stylu i proporcji (Antek niższy od Olka, krępszy).
+
+**Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Antka w nowych ujęciach; zawsze razem z referencją):
+
+> @antek, a 4-year-old boy in the same 3D animated style as @ada and @olek, slightly shorter than Olek and more sturdily built. Fair light skin with rosy cheeks, rounded face, blue eyes. Straight light blonde hair in a bowl cut with a straight fringe across the forehead. Loose oversized white t-shirt with thin black horizontal stripes, black leggings, plain black low-top canvas skate sneakers with white soles. No hat, no logos, no text.
+
+Referencje `@antek`, `@antek_obrot`, `@antek_miny` są w panelu References projektu (dodane przez Chrome 2026-09-09). Assety w folderze projektu nazywają się `antek-kanon`, `antek-obrot`, `antek-miny`.
+
+**Historia.** Dwa warianty w czarnej czapce z daszkiem (2026-09-09) zostały odrzucone i usunięte z Runway.

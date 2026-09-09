@@ -1,10 +1,10 @@
 # Zuzia
 
-Źródło: `Postać - Zuzia.docx`. Kanon wyglądu: `zuzia-kanon.png`, obrót `zuzia-obrot.png`, miny `zuzia-miny.png` (sekcja „Runway” na końcu).
+Źródło: `Postać - Zuzia.docx`. Kanon wyglądu: `zuzia-kanon.png`, obrót `zuzia-obrot.png`, miny `zuzia-miny.png`, kotka Luna `luna-kanon.png`, `luna-obrot.png`, `luna-miny.png` (sekcja „Runway” na końcu).
 
 ## W jednym zdaniu
 
-Najstarsza w grupie, cicha dziewczynka z dwoma warkoczykami i białym kotkiem Luną, która widzi świat obrazami i potrafi uprzeć się jak mało kto.
+Najstarsza w grupie, cicha dziewczynka z dwoma warkoczykami i białą kotką Luną (ragdoll), która widzi świat obrazami i potrafi uprzeć się jak mało kto.
 
 ## Metryka
 
@@ -29,7 +29,7 @@ Najstarsza w grupie, cicha dziewczynka z dwoma warkoczykami i białym kotkiem Lu
 
 - Taniec, śpiew.
 - Przebieranie się, zabawy w role, odgrywanie scenek.
-- Maskotki, szczególnie kotki.
+- Koty: Luna przede wszystkim, ale każdy kot po drodze zatrzymuje Zuzię.
 
 ## Supermoc
 
@@ -54,7 +54,7 @@ Odpływa w swoją wyobraźnię. Zamiast słuchać, widzi w chmurach kształty, w
 
 ## Wyjątkowy detal
 
-Biały kotek Luna, ulubiona maskotka, która „uczestniczy” w przygodach. Luna ma w bajce własne zdanie (w ustach Zuzi), bywa pretekstem do zabawy w role i powodem uporu („Luna też chce iść”).
+Luna, żywa kotka Zuzi: ragdoll, cała biała, długie puszyste futro, niebieskie oczy, spokojna i duża jak na kota (przy czterolatce wygląda na wielką). Wychodzi z domu i „uczestniczy” w przygodach. Luna ma w bajce własne zdanie (w ustach Zuzi), bywa pretekstem do zabawy w role i powodem uporu („Luna też chce iść”). Luna nie mówi: miauczy, mruczy, syczy (patrz `świat.md`).
 
 ---
 
@@ -94,6 +94,10 @@ Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski
 | `@zuzia` | obraz kanoniczny: cała sylwetka, trzy czwarte, neutralne tło | `zuzia-kanon.png` | `zuzia-kanon` |
 | `@zuzia_obrot` | obrót: przód, bok, tył | `zuzia-obrot.png` | `zuzia-obrot` |
 | `@zuzia_miny` | plansza sześciu min | `zuzia-miny.png` | `zuzia-miny` |
+| `@luna` | kanon Luny: biała kotka ragdoll, cała sylwetka, trzy czwarte, neutralne tło | `luna-kanon.png` | `luna-kanon` |
+| `@luna_obrot` | obrót Luny: przód, bok, tył | `luna-obrot.png` | `luna-obrot` |
+| `@luna_miny` | plansza sześciu min Luny: spokój, ciekawość, strach, smutek, złość (syk), ziewanie | `luna-miny.png` | `luna-miny` |
+| `@luna_zapas` | odrzucony, smuklejszy wariant kanonu; nie używać w scenach | brak | `luna-zapas` |
 
 Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd podkreślenia. Nazwy assetów w bibliotece mogą mieć myślniki.
 
@@ -106,11 +110,21 @@ Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd 
 - kanon: `1cd02503-0620-4119-800c-5068f50cb54b`
 - obrót: `3efbd314-d68a-44ec-9d31-46e0e3f3da7e`
 - miny: `27c16b34-3fc6-456b-bc89-73f4bfe56a0f`
+- Luna kanon: `630510bb-17fc-4f8a-ba56-6bb7e22f3cd6`
+- Luna wariant zapasowy, smuklejszy (w projekcie jako `@luna_zapas`, nieużywany w scenach): `373257b7-303f-4cb1-8330-a721e9d1ecce`
+- Luna obrót: `05009adb-8511-4055-af31-148997d7bcaf`
+- Luna miny: `a7a61418-1396-4bf0-9718-66a5e60ac804`
 
 Model: Nano Banana Pro. Punktem wyjścia kanonu był obraz bazowy wgrany do Runway.
 
 **Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Zuzi w nowych ujęciach; zawsze razem z referencją):
 
 > @zuzia, a 4-year-old girl in the same 3D animated style as @ada. Fair light skin with rosy cheeks. Light blonde slightly wavy hair in two braids hanging just behind the shoulders, side-swept bangs, several small colorful button-shaped hair clips on both sides of her head, oval face, blue eyes, small rounded nose, slim build, same height as Ada. Lilac-purple oversized knit hoodie with peach-pink drawstrings, cuffs and hem, peach-pink leggings, pink canvas sneakers with a small strawberry print, no logos or brand marks.
+
+**Prompt bazowy Luny** (zawsze z referencją `@luna`, a w scenach z Zuzią także `@zuzia`):
+
+> @luna, Zuzia's cat, a stylized 3D animated cat character in the same children's series style as @zuzia: rounded appealing shapes, big round blue eyes, small pink nose, soft clumped stylized white fur. A Ragdoll cat, entirely pure white with no markings, long fluffy fur, big fluffy tail, slightly chubby, calm friendly expression. A live cat, not a toy. No collar.
+
+Luna powstała 2026-09-09 z dwóch referencji: realistycznego szkicu ragdolla i kanonu Zuzi (styl). Pierwsza para wariantów wyszła fotorealistycznie i została odrzucona. Obrót i miny powstały z kanonu Luny. Referencje `@luna`, `@luna_obrot`, `@luna_miny` (i `@luna_zapas`) są w panelu References projektu, dodane przez Chrome 2026-09-09 (MCP tego nie robi). Assety w folderze projektu nazywają się `luna-kanon`, `luna-obrot`, `luna-miny`, `luna-zapas`.
 
 **Historia.** Z dwóch wariantów kanonu (2026-09-09) wybrano ten bliższy obrazowi bazowemu (spinki-guziczki, dzianinowa bluza z kieszenią); drugi usunięto z Runway.

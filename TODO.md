@@ -50,6 +50,7 @@ Każdą kartę uzupełniasz dopiero, gdy miejsce ma być tłem odcinka. Pytania 
 - [ ] D3. Rodzice: przejrzyj `postacie/dorośli.md`. Jeśli chcesz coś zmienić (imię, zawód, żart), wpisz to obok. Obrazy referencyjne 3D dorosłych, jeśli powstaną, wrzuć do `postacie/<imię>/`.
 - [ ] D4. Piąte dziecko lub gość: później.
 - [x] D5. Antek: koniec kwietnia 2022.
+- [x] D6. Tomek (tata Olka): pełna karta `postacie/tomek/tomek.md` i kanon wyglądu (`tomek-kanon.png`, obrót, miny). Wiek około 35 lat, wąsy i zegarek jako stałe elementy oraz zwroty z odcinka 01 („Alarm. Zegarek uciekł.”, „Ciepło… cieplej…”, „Kto pierwszy w butach, ten wygrywa.”) potwierdzone 2026-09-09.
 
 ---
 
