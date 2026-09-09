@@ -1,6 +1,6 @@
 # Zuzia
 
-Źródło: `Postać - Zuzia.docx`.
+Źródło: `Postać - Zuzia.docx`. Kanon wyglądu: `zuzia-kanon.png`, obrót `zuzia-obrot.png`, miny `zuzia-miny.png` (sekcja „Runway” na końcu).
 
 ## W jednym zdaniu
 
@@ -82,3 +82,35 @@ Biały kotek Luna, ulubiona maskotka, która „uczestniczy” w przygodach. Lun
 **Czego unikać.** Zuzia nie jest słaba ani płaczliwa. Cichość to nie nieśmiałość: gdy ma zdanie, jest z całej czwórki najbardziej nieustępliwa. Nie jest też „ta artystyczna” dla ozdoby: jej obrazy mają w bajce działać, to znaczy pomagać rozwiązać problem albo nazwać uczucie.
 
 **Kontrola przy pisaniu.** W scenach z Zuzią: co najmniej jedno „To wygląda jak…”, „Poczekaj…”, „Ja chcę sama!” lub „Zobacz…”. Raz w odcinku porównanie Zuzi staje się kluczem lub nazwą. Luna pojawia się przynajmniej raz. Raz w odcinku Zuzia odpływa i ktoś ją zawraca.
+
+## Runway
+
+Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski`): <https://app.runwayml.com/video-tools/teams/parciszewski/ai-tools/projects/d6ee41e5-b5ee-4ad3-9f3b-aaec64b0ae4f>
+
+**Referencje projektu** (panel „References”, w promptach wywoływane przez `@nazwa`):
+
+| Referencja | Co to jest | Plik w repo | Asset w projekcie |
+|---|---|---|---|
+| `@zuzia` | obraz kanoniczny: cała sylwetka, trzy czwarte, neutralne tło | `zuzia-kanon.png` | `zuzia-kanon` |
+| `@zuzia_obrot` | obrót: przód, bok, tył | `zuzia-obrot.png` | `zuzia-obrot` |
+| `@zuzia_miny` | plansza sześciu min | `zuzia-miny.png` | `zuzia-miny` |
+
+Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd podkreślenia. Nazwy assetów w bibliotece mogą mieć myślniki.
+
+**Zasada.** Każdy nowy obraz lub ujęcie z Zuzią generuje się z referencją `@zuzia` (do scen zbiorowych także z `@zuzia_obrot`), nigdy z samego opisu tekstowego. Obrót i miny powstały z kanonu.
+
+**Styl.** Kanon Zuzi powstał z dwóch referencji naraz: pierwotnego obrazu bazowego od autorki (projekt postaci: włosy, spinki, ubranie; `zuzia.jpg`, usunięty z repo po zatwierdzeniu kanonu) i kanonu Ady (styl renderu, proporcje, wielkość oczu, światło). Dzięki temu obie postacie wyglądają jak z jednej serii; obraz bazowy sam w sobie był w innej, bardziej przerysowanej stylistyce. Tak samo robić kolejne postacie: zawsze z `@ada` jako wzorcem stylu.
+
+**Identyfikatory zadań Runway** (do użycia w MCP jako `referenceImages[].taskId`):
+
+- kanon: `1cd02503-0620-4119-800c-5068f50cb54b`
+- obrót: `3efbd314-d68a-44ec-9d31-46e0e3f3da7e`
+- miny: `27c16b34-3fc6-456b-bc89-73f4bfe56a0f`
+
+Model: Nano Banana Pro. Punktem wyjścia kanonu był obraz bazowy wgrany do Runway.
+
+**Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Zuzi w nowych ujęciach; zawsze razem z referencją):
+
+> @zuzia, a 4-year-old girl in the same 3D animated style as @ada. Fair light skin with rosy cheeks. Light blonde slightly wavy hair in two braids hanging just behind the shoulders, side-swept bangs, several small colorful button-shaped hair clips on both sides of her head, oval face, blue eyes, small rounded nose, slim build, same height as Ada. Lilac-purple oversized knit hoodie with peach-pink drawstrings, cuffs and hem, peach-pink leggings, pink canvas sneakers with a small strawberry print, no logos or brand marks.
+
+**Historia.** Z dwóch wariantów kanonu (2026-09-09) wybrano ten bliższy obrazowi bazowemu (spinki-guziczki, dzianinowa bluza z kieszenią); drugi usunięto z Runway.

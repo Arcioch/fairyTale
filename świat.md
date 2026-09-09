@@ -42,7 +42,7 @@ Rzeczy, które autorka chce rozwijać w kolejnych bajkach. Nie rozstrzygamy ich 
 
 Ustalone przez autorkę we wrześniu 2026.
 
-- **Medium:** animacja 3D na YouTube. Postacie wyglądają jak na obrazach referencyjnych w `postacie/<imię>/` (np. `ada.webp`).
+- **Medium:** animacja 3D na YouTube. Postacie wyglądają jak na obrazach kanonicznych `postacie/<imię>/<imię>-kanon.png` (plus obrót i miny). Referencje Runway i prompt bazowy są w sekcji „Runway” karty postaci.
 - **Głosy:** każda postać mówi własnym głosem, dialogi. **Narratora nie ma.** Jeśli coś trzeba wiedzieć, ktoś to mówi albo to widać.
 - **Długość:** około 9 minut historii razem z segmentem eksperymentu (cel 8,5 do 9,5). Z czołówką i napisami 10 do 12 minut.
 - **Czołówka:** wspólna, śpiewana, ta sama w każdym odcinku (`odcinki/czołówka.md`, do napisania). Nie wchodzi do scenariuszy.

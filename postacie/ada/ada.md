@@ -1,6 +1,6 @@
 # Ada
 
-Źródło: `Postać - Ada.docx`, obraz referencyjny `ada.webp`.
+Źródło: `Postać - Ada.docx`. Kanon wyglądu: `ada-kanon.png`, obrót `ada-obrot.png`, miny `ada-miny.png` (sekcja „Runway” na końcu).
 
 ## W jednym zdaniu
 
@@ -15,7 +15,7 @@ Najmłodsza z czwórki, mała dynamitka: gdy pada pomysł, mówi „dobra, robim
 ## Wygląd
 
 - Wzrost jak Zuzia, szczupła.
-- Brunetka, ciemna karnacja, brązowe duże oczy, owalna twarz, pełne usta.
+- Brunetka, karnacja ciepła, lekko śniada: wyraźnie ciemniejsza niż u Zuzi, Olka i Antka, ale nie bardzo ciemna (jak na `ada-kanon.png`). Brązowe duże oczy, owalna twarz, pełne usta.
 - Grzywka podpięta na bok spinką (stały element), włosy w kucyku lub koczku, z którego zawsze coś wystaje.
 - Na obrazku: różowa oversize bluza, różowe legginsy, białe sportowe buty z kolorowymi wstawkami, głowa przekrzywiona, uśmiech półgębkiem, ręce za plecami jakby coś chowała.
 
@@ -80,3 +80,33 @@ Wyzwania to jej paliwo. Każdą sytuację umie zamienić w misję („kto pierws
 **Czego unikać.** Ada nie jest niegrzeczna ani lekkomyślna. Nie niszczy rzeczy z premedytacją, nie śmieje się z cudzych porażek. Jej błędy biorą się z tempa, nie ze złej woli. Nie należy jej też robić „małej”: jest najmłodsza, ale nikt jej nie wyręcza i ona sama tego nie chce.
 
 **Kontrola przy pisaniu.** W każdej scenie z Adą powinno paść co najmniej jedno: „Dobra, robimy!”, „Pokaż, ja spróbuję.”, „To jest proste.” lub „Już wiem.” Co najmniej raz w odcinku jej pośpiech ma skutek, który trzeba naprawić.
+
+## Runway
+
+Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski`): <https://app.runwayml.com/video-tools/teams/parciszewski/ai-tools/projects/d6ee41e5-b5ee-4ad3-9f3b-aaec64b0ae4f>
+
+**Referencje projektu** (panel „References”, w promptach wywoływane przez `@nazwa`):
+
+| Referencja | Co to jest | Plik w repo | Asset w projekcie |
+|---|---|---|---|
+| `@ada` | obraz kanoniczny: cała sylwetka, trzy czwarte, neutralne tło | `ada-kanon.png` | `ada-kanon` |
+| `@ada_obrot` | obrót: przód, bok, tył | `ada-obrot.png` | `ada-obrot` |
+| `@ada_miny` | plansza sześciu min | `ada-miny.png` | `ada-miny` |
+
+Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd podkreślenia. Nazwy assetów w bibliotece mogą mieć myślniki.
+
+**Zasada.** Każdy nowy obraz lub ujęcie z Adą generuje się z referencją `@ada` (do scen zbiorowych także z `@ada_obrot`), nigdy z samego opisu tekstowego. Obrót i miny powstały z kanonu.
+
+**Identyfikatory zadań Runway** (do użycia w MCP jako `referenceImages[].taskId`):
+
+- kanon: `f90e7042-deed-4d46-a107-cd4d641feeb4`
+- obrót: `37df4754-564f-4808-8978-85af60ed5aa3`
+- miny: `201c9fae-d528-415d-8fe0-48ebe15f4ae9`
+
+Model: Nano Banana Pro. Punktem wyjścia kanonu był pierwotny obraz bazowy od autorki (`ada.webp`, usunięty z repo po zatwierdzeniu kanonu).
+
+**Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Ady w nowych ujęciach; zawsze razem z referencją):
+
+> @ada, a 4-year-old girl in a 3D animated children's series style. Light warm complexion, slightly tanned, with rosy cheeks. Dark brown hair in a messy bun with loose strands sticking out, bangs pinned to the side with a small pink hair clip, big round brown eyes, oval face, full lips. Pink oversized sweatshirt, pink leggings, plain white chunky sneakers with pastel pink and blue accents, no logos or brand marks.
+
+**Historia.** Pierwsza wersja kanonu (2026-09-09) miała za ciemną karnację i logo na butach; została odrzucona i usunięta z Runway razem z wygenerowanymi z niej obrotem i minami. Obecny kanon to druga wersja.
