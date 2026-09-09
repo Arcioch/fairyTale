@@ -21,6 +21,7 @@ fairyTale/
 ├── README.md              opis projektu
 ├── TODO.md                lista pytań i zadań dla autorki
 ├── świat.md               biblia świata: ustalenia, wątki na przyszłość, format serii
+├── produkcja.md           jak ze scenariusza powstaje materiał w Runway: referencje, modele, głosy, koszty, pułapki
 ├── postacie/              bohaterowie, folder na postać
 │   ├── README.md          indeks, dynamika grupy, pary, rekwizyty
 │   ├── dorośli.md         rodzice czwórki, panie z przedszkola (źródło prawdy o dorosłych)
@@ -38,10 +39,11 @@ fairyTale/
 │   ├── kanon.md           fakty ustalone przez gotowe odcinki; obowiązują w następnych
 │   ├── czołówka.md        wspólna śpiewana czołówka (do napisania)
 │   ├── _szablon/          konspekt.md i scenariusz.md
-│   └── NN tytuł/          konspekt.md, scenariusz.md, sprawdzenie.md
+│   └── NN tytuł/          konspekt.md, scenariusz.md, sprawdzenie.md, runway.md, runway-scena-N.json
 ├── narzędzia/
 │   ├── sprawdz.js         deterministyczne sprawdzenie scenariusza (Node): czas, sceny, kwestie, maniery, zwroty, kanon, indeks
-│   └── hook-sprawdz.js    hook Claude Code: odpala sprawdz.js po każdym zapisie scenariusz.md
+│   ├── hook-sprawdz.js    hook Claude Code: odpala sprawdz.js po każdym zapisie scenariusz.md
+│   └── graf-runway.js     buduje graf workflow Runway dla jednej sceny z pliku `odcinki/NN tytuł/runway-scena-N.json`
 ├── .claude/
 │   ├── settings.json      hook PostToolUse (Write|Edit) → hook-sprawdz.js
 │   └── skills/            skille projektu (poniżej)
@@ -73,6 +75,14 @@ node "narzędzia/sprawdz.js" NN --metryka
 ```
 
 Liczy szacowany czas (słowa dialogu przez 140 na minutę plus 4 s na didaskalium) i wpisuje go do metryki; sprawdza sceny (nagłówek z miejscem i porą, didaskalium na start, brak narracji poza nawiasem), mówców (nieznani, narrator, nie w metryce), długość kwestii i zdań, maniery z numerami linii, zwroty z kart w kwestiach właściwej postaci, detale, karty miejsc, fakty z kanonu, zgodność z indeksem. Rzeczy, które da się policzyć, liczy skrypt, nie model.
+
+**Produkcja w Runway.** Graf workflow dla sceny buduje `narzędzia/graf-runway.js` z pliku definicji `odcinki/<NN tytuł>/runway-scena-N.json` (referencje, głosy, ujęcia, prompty). Kwestie dialogowe skrypt czyta 1:1 ze `scenariusz.md`, więc nigdy nie przepisujemy ich ręcznie:
+
+```bash
+node "narzędzia/graf-runway.js" "odcinki/01 Kto puścił zajączka/runway-scena-1.json"
+```
+
+Wynik idzie do Runway przez MCP (`validate_workflow_graph`, potem `create_workflow` albo `save_workflow_version`). Pełna instrukcja produkcji jest w `produkcja.md`, wzorzec definicji w `odcinki/01 Kto puścił zajączka/runway-scena-1.json`. Generowanie kosztuje kredyty i wymaga wyraźnej zgody autora.
 
 **Hook.** `.claude/settings.json` ma hook `PostToolUse` na `Write|Edit`: po każdym zapisie pliku `odcinki/<NN tytuł>/scenariusz.md` uruchamia się `narzędzia/hook-sprawdz.js`, który odpala `sprawdz.js` (bez `--metryka`) i oddaje wynik modelowi jako kontekst. Nie da się więc zapisać scenariusza bez sprawdzenia. Wynik hooka trzeba przeczytać i zareagować: naprawić trafienia albo wpisać do notatek, dlaczego zostają. Inne pliki hook ignoruje. Agent bez hooków uruchamia skrypt ręcznie.
 

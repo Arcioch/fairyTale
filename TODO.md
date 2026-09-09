@@ -79,6 +79,14 @@ Każdą kartę uzupełniasz dopiero, gdy miejsce ma być tłem odcinka. Pytania 
 
 ---
 
+## G. Produkcja w Runway (scena 1 odcinka 01)
+
+- [ ] G1. **Kieszeń bluzy kontra kanon.** Scenariusz sceny 1 mówi „Olek wyjmuje kapsel i chowa do kieszeni bluzy”, a notatki odcinka powtarzają „kapsel jedzie w kieszeni bluzy”. Kanon Olka (wersja 2) jest bez bluzy: koszulka baby blue i jasne jeansy. Co obowiązuje: Olek ma w tym odcinku bluzę na wierzchu (wtedy potrzebna osobna referencja) czy kapsel idzie do kieszeni jeansów i poprawiamy dwie linijki? W grafie Runway stoi na razie „do kieszeni”, bez nazywania ubrania.
+- [ ] G2. **Głosy postaci.** Węzeł ElevenLabs w Runway ma 49 gotowych głosów z odsłuchem; wybór to obsada. Trzeba wskazać po jednym głosie dla Olka i Tomka (dalej dla Ady, Antka, Zuzi). W tej liście nie ma głosu małego dziecka, najbliżej „Rachel — feminine, young, childish”. Kandydaci z identyfikatorami: `odcinki/01 Kto puścił zajączka/runway.md`.
+- [ ] G3. **Referencja Tomka do sprawdzenia.** Asset `tomek-kanon` w Runway pochodzi z zadania `bd51f021`, które karta Tomka wymienia wśród odrzuconych (wariant B); jako kanon karta podaje `bd0219e6`. Do porównania obrazków i poprawienia albo assetu, albo karty.
+
+---
+
 ## Jak oddać odpowiedzi
 
 Najprościej: wpisz je tutaj pod pytaniami i napisz asystentowi „przenieś odpowiedzi z TODO”. Albo od razu w plikach `świat.md` i `miejsca/…`. Nie trzeba niczego formatować.

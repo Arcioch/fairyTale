@@ -1,0 +1,72 @@
+{
+  "odcinek": "01 Kto puścił zajączka",
+  "scena": 1,
+  "workflow": "a94fa1c8-cb39-4d69-9ce6-1f40357ffa1f",
+
+  "referencje": {
+    "olek": "0b19d26e-cd40-4678-85a4-f3ec45410a15",
+    "tomek": "c7f2a7f0-7a74-4cc9-9b2c-3928fc625f09",
+    "dom": "9ec36d68-20df-4ff8-90a9-187462340be7"
+  },
+
+  "glosy": {
+    "OLEK": "zrHiDhphv9ZnVXBqCLjz",
+    "TOMEK": "IKne3meq5aSn9XLyUdCD"
+  },
+
+  "obraz": { "proporcje": "16:9", "rozmiar": "1K", "sztuk": 1 },
+  "wideo": { "sekundy": 5, "rozdzielczosc": "720p", "proporcje": "16:9" },
+
+  "wspolne": "The apartment matches the layout reference: kitchen units along one wall with a fridge covered with magnets and children's drawings, a cooker, sink, bread box and a frying pan on a hook, the dining table by the window, and further back a blue sofa and a wall-long bookshelf full of plants. Camera inside the room at a small child's eye level, never isometric. Same 3D animated style as the reference images, children's animated series look, no logos, no text, no writing on screen, no floating symbols or music notes, 16:9.",
+
+  "ujecia": [
+    {
+      "nr": "1.1",
+      "refs": ["olek", "tomek", "dom"],
+      "kwestia": 0,
+      "obraz": "Wide establishing shot of a small apartment kitchen on an early spring morning. Morning sunlight lies flat across a light wooden table by the window. @tomek stands at the cooker holding the frying pan out in front of him; exactly one pancake is in the air, directly above the pan and close to it, caught mid-flip. @olek, already dressed for preschool, wearing his loose oversized baby blue t-shirt with a small grey smiley print worn untucked, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair, sits at the table on a chair with a cushion under him, clapping, a plate with two pancakes in front of him. Warm soft morning light.",
+      "ruch": "Camera holds still. The pancake spins once in the air and drops back into the pan; the man bows his head slightly; the boy claps twice and grins. Small natural movements, soft morning light, one continuous shot, no cuts.",
+      "sfx": "Cosy kitchen in the morning: batter sizzling in a frying pan, a light clatter of a plate, faint birdsong behind a window."
+    },
+    {
+      "nr": "1.2",
+      "refs": ["olek", "dom"],
+      "kwestia": 1,
+      "obraz": "Close shot from slightly above of @olek at the kitchen table, wearing his loose oversized baby blue t-shirt with a small grey smiley print worn untucked, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair, laying three banana slices onto a pancake: two as eyes, one as a smile. His hands are careful, tongue at the corner of his mouth. The plate holds three pancakes. Morning sun falls across the table and the back of his hand. Shallow background: the kitchen out of focus.",
+      "ruch": "Camera holds close on the plate. The boy sets the last banana slice down, presses it gently into place, then tips his head to look at the finished face. Only small hand and head movements, one continuous shot.",
+      "sfx": "Very quiet kitchen room tone, a soft tap of a banana slice on a pancake, a distant pan sizzling."
+    },
+    {
+      "nr": "1.3",
+      "refs": ["olek", "tomek", "dom"],
+      "kwestia": 6,
+      "obraz": "Kitchen, morning. @tomek crouches in front of the open fridge, leaning in to search among jars and boxes; cool pale light from inside the fridge falls on his face while the rest of the kitchen stays warm and sunlit. In the background, out of focus, @olek sits at the table on his cushion watching him and calling out, wearing his loose oversized baby blue t-shirt with a small grey smiley print, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair.",
+      "ruch": "The man leans deeper into the fridge and moves a jar aside; the cold light shifts across his face; in the background the boy leans back on his chair and calls out. Slow calm motion, one continuous shot.",
+      "sfx": "A fridge door opening, the low hum of a fridge, glass jars knocking gently together."
+    },
+    {
+      "nr": "1.4",
+      "refs": ["olek", "tomek", "dom"],
+      "kwestia": 9,
+      "obraz": "Kitchen, morning. @tomek stands by the table holding an open old shoebox; inside lie pebbles, a bottle cap, a feather and a plain silver wristwatch. @olek, wearing his loose oversized baby blue t-shirt with a small grey smiley print, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair, standing on his chair, reaches into the box and takes the bottle cap, already slipping it into his pocket. Both are looking into the box. Warm morning light from the window behind them.",
+      "ruch": "The man lowers the shoebox towards the table; the boy reaches in, picks up the bottle cap and closes his fist around it. Precise small hand movements, both heads bent over the box, one continuous shot.",
+      "sfx": "A cardboard shoebox lid sliding off, small pebbles rattling, a metal bottle cap tapping against cardboard."
+    },
+    {
+      "nr": "1.5",
+      "refs": ["olek", "tomek", "dom"],
+      "kwestia": null,
+      "obraz": "Kitchen, morning, wider shot that keeps both the man and the ceiling in frame. @tomek dances a small victory dance with both arms raised, the plain silver wristwatch back on his wrist catching the low morning sun from the window. A single small bright oval of reflected light lies on the white ceiling above him, sharp-edged and clearly visible. @olek, wearing his loose oversized baby blue t-shirt with a small grey smiley print, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair, has frozen at the table with a pancake in his hand, head tipped back, staring up at the bright spot. The reflection is the brightest thing in the frame.",
+      "ruch": "The man raises both arms and turns in a small dance; the bright oval of reflected light slides across the white ceiling, following his wrist, staying sharp and never blinking out; the boy tips his head back and follows the moving spot with his eyes, pancake still in his hand. One continuous shot.",
+      "sfx": "Bare feet turning on a kitchen floor, a light cheerful hum, quiet kitchen room tone."
+    },
+    {
+      "nr": "1.6",
+      "refs": ["olek", "dom"],
+      "kwestia": null,
+      "obraz": "Kitchen doorway, morning. @olek, wearing his loose oversized baby blue t-shirt with a small grey smiley print, light wide-leg jeans and off-white low-top sneakers, short straight light blonde hair, stands in the doorway with a pancake in his hand, turned to leave but looking back over his shoulder and upwards at the ceiling. The white ceiling above the table is completely empty, evenly lit, no bright spot on it. Behind him the kitchen is quiet, the table half cleared, sunlight still on the wood.",
+      "ruch": "The boy pauses in the doorway, turns his head to look back and up at the empty ceiling, holds for a moment, then steps out of frame. The camera holds on the quiet kitchen. One continuous shot.",
+      "sfx": "A quiet empty kitchen, a chair creaking softly, small footsteps walking away."
+    }
+  ]
+}
