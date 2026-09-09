@@ -15,7 +15,7 @@ Najstarsza w grupie, cicha dziewczynka z dwoma warkoczykami i białą kotką Lun
 ## Wygląd
 
 - Wzrost jak Olek, szczupła.
-- Jasne blond włosy do ramion, delikatnie kręcone (jak u Olka). Rzadko rozpuszczone, najczęściej dwa warkoczyki lekko za ramiona.
+- Jasne blond włosy do ramion, delikatnie kręcone. Rzadko rozpuszczone, najczęściej dwa warkoczyki lekko za ramiona.
 - Owalna twarz, niebieskie oczy, mały zaokrąglony nosek.
 - Kolorowe spinki po obu stronach głowy (stały element).
 

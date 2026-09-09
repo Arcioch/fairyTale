@@ -15,14 +15,22 @@ Najwyższy z grupy, spokojny obserwator z kieszeniami pełnymi skarbów, który 
 ## Wygląd
 
 - Najwyższy z czwórki, szczupły.
-- Blond włosy, delikatnie kręcone: krótkie boki, dłuższa góra, loczki z przodu, często w „artystycznym nieładzie”.
-- Owalna twarz, niebieskie oczy, czasem rumieńce, dołeczek w lewym policzku.
+- Włosy krótkie i proste, w chłodnym jasnym blondzie: krótko ścięte boki i tył, krótsza teksturowana góra zaczesana do przodu.
+- Owalna twarz, niebieskie oczy, czasem rumieńce, dołeczek w lewym policzku. Uszy przylegają do głowy.
 
 ## Ubiór
 
-- Czarne trampki typu vans (stały element).
-- Czarne legginsy i szeroka bluza z kapturem albo luźna koszulka oversize, czasem „cool dres” (spodnie plus bluza).
-- Czapka z daszkiem lub kapelusz typu bucket (stały element).
+**Strój kanoniczny** (to, co widać na `olek-kanon.png`, obowiązuje w odcinkach):
+
+- Luźna koszulka oversize w kolorze baby blue, z małym szarym nadrukiem buźki na piersi, wypuszczona na spodnie.
+- Jasne jeansy z szeroką prostą nogawką.
+- Jasne, kremowe trampki low-top, bez logo.
+
+**Z karty od autorki** (garderoba poza kanonem, do wariantów i innych scen):
+
+- Czarne trampki typu vans.
+- Czarne legginsy i szeroka bluza z kapturem, czasem „cool dres” (spodnie plus bluza).
+- Czapka z daszkiem lub kapelusz typu bucket.
 - Ulubione kolory: czarny, stonowane, niebieski, zielony.
 
 ## Co lubi robić
@@ -94,7 +102,7 @@ Katalog postaci w Runway, projekt **fairyTale** (konto Piotr, team `parciszewski
 
 | Referencja | Co to jest | Plik w repo | Asset w projekcie |
 |---|---|---|---|
-| `@olek` | obraz kanoniczny: cała sylwetka, trzy czwarte, neutralne tło, bez nakrycia głowy | `olek-kanon.png` | `olek-kanon` |
+| `@olek` | obraz kanoniczny: cała sylwetka, na wprost, neutralne tło, bez nakrycia głowy | `olek-kanon.png` | `olek-kanon` |
 | `@olek_obrot` | obrót: przód, bok, tył | `olek-obrot.png` | `olek-obrot` |
 | `@olek_miny` | plansza sześciu min: spokój z dołeczkiem, ciekawość, „Ej, patrzcie!”, namysł, smutek, mina niejadka | `olek-miny.png` | `olek-miny` |
 
@@ -102,20 +110,28 @@ Nazwy referencji w Runway nie mogą mieć myślników (Runway je wycina), stąd 
 
 **Zasada.** Każdy nowy obraz lub ujęcie z Olkiem generuje się z referencją `@olek` (do scen zbiorowych także z `@olek_obrot`), nigdy z samego opisu tekstowego. Obrót i miny powstały z kanonu.
 
-**Nakrycie głowy.** Kanon jest bez czapki (decyzja z 2026-09-09). Karta mówi, że czapka z daszkiem lub kapelusz bucket to stały element; do scen w czapce trzeba osobnej referencji (do zrobienia, gdy autorka potwierdzi, kiedy Olek ją nosi).
+**Nakrycie głowy.** Kanon jest bez czapki (decyzja z 2026-09-09). Karta od autorki mówi, że czapka z daszkiem lub kapelusz bucket to stały element; do scen w czapce trzeba osobnej referencji (do zrobienia, gdy autorka potwierdzi, kiedy Olek ją nosi).
 
 **Identyfikatory zadań Runway** (do użycia w MCP jako `referenceImages[].taskId`):
 
-- kanon: `1a3f952d-c1d5-4eea-9cc5-53020c231356`
-- obrót: `bab0d9a5-9f4a-4571-8232-49155598ec59`
-- miny: `73c665e3-bfd7-4c46-8b0e-8bbd0c740701`
+- kanon: `6b9565a1-8baf-47f7-b3d8-09cd6997a233`
+- obrót: `1beca44d-4b8a-4509-a123-e801236638a7`
+- miny: `f61c436c-b65f-4c2b-9722-91cff87d1ba4`
 
-Model: Nano Banana Pro. Olek nie miał obrazu bazowego od autorki; kanon powstał z opisu w karcie z kanonem Ady jako wzorcem stylu, najpierw w kapeluszu bucket (zaakceptowany wygląd), potem bez kapelusza (wersja kanoniczna, wariant B z dwóch).
+Model: Nano Banana Pro.
 
 **Prompt bazowy** (po angielsku, do odtworzenia kanonu lub opisu Olka w nowych ujęciach; zawsze razem z referencją):
 
-> @olek, a 4-and-a-half-year-old boy in the same 3D animated style as @ada, the tallest of his friends, slim. Fair light skin with slight rosy cheeks and a dimple in his left cheek. Light blonde, softly curly hair: short on the sides, longer on top, loose curls falling onto his forehead in an artful mess. Oval face, blue eyes. Loose oversized dark navy-blue hoodie, black leggings, plain black low-top canvas skate sneakers with white soles. One hoodie pocket bulges with small treasures (a pebble and a feather peeking out). No logos, no text.
+> @olek, a 4-and-a-half-year-old boy in the same 3D animated style as @ada, the tallest of his friends, slim. Fair light skin with slightly rosy cheeks and a dimple in his left cheek. Oval face, blue eyes, ears close to the head. Short straight hair in a cool light blonde: cropped short at the sides and back, short textured top brushed forward. Loose oversized baby blue t-shirt with a small soft grey smiley print on the chest, worn untucked over the jeans. Light wide-leg jeans with a clean even wash. Off-white low-top sneakers with cream soles. No hat, no logos, no text.
 
-Referencje `@olek`, `@olek_obrot`, `@olek_miny` są w panelu References projektu (dodane przez Chrome 2026-09-09). Assety w folderze projektu nazywają się `olek-kanon`, `olek-obrot`, `olek-miny`.
+**Historia.**
 
-**Historia.** Warianty w kapeluszu i wariant A bez kapelusza (2026-09-09) zostały odrzucone i usunięte z Runway.
+- **Wersja 1 (2026-09-09, wycofana).** Olek nie miał obrazu bazowego od autorki; kanon powstał z opisu w karcie, z kanonem Ady jako wzorcem stylu. Blond loki, granatowa bluza z kapturem z piórkiem w kieszeni, czarne legginsy, czarne trampki vans. Warianty w kapeluszu bucket i wariant A bez kapelusza zostały odrzucone i usunięte z Runway.
+- **Wersja 2 (2026-09-09, obowiązująca).** Przerobiona na podstawie zdjęcia referencyjnego od autorki, w pięciu podejściach. Zmiany wobec wersji 1: włosy krótkie i proste zamiast loków, chłodniejszy blond, uszy przy głowie, koszulka baby blue z buźką zamiast bluzy, jasne szerokie jeansy zamiast legginsów, jasne trampki zamiast czarnych. Zdjęcie nie zostało wysłane do Runway: rysy i fryzura zostały opisane słowami w promptcie, więc podobieństwo jest przybliżone.
+
+**Stan referencji w Runway** (2026-09-09). Panel References nie pozwala podmienić obrazu w istniejącej referencji, więc stare zostały przemianowane, a nowe dodane pod właściwymi nazwami:
+
+- `@olek`, `@olek_obrot`, `@olek_miny` — wersja 2, obowiązująca.
+- `@olek_v1`, `@olek_obrot_v1`, `@olek_miny_v1` — wersja 1, zostawione na wszelki wypadek. Nie używać w promptach; do skasowania, gdy autorka potwierdzi, że wersja 2 się broni w scenach.
+
+**Do zrobienia.** Workflow `01 scena 1 - kuchnia u Olka` ma wpięty stary asset kanonu `e35e665f-7131-4122-8a4c-3f925ecc52a9` (patrz `odcinki/01 Kto puścił zajączka/runway.md`). Trzeba go podmienić na nowy, inaczej scena 1 wygeneruje się ze starym wyglądem.

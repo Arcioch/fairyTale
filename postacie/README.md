@@ -52,7 +52,7 @@ Rodzice czwórki i panie z przedszkola (Madzia, Kasia) są opisani w `dorośli.m
 
 - Ada: spinka z grzywką na bok, białe buty z kolorowymi paskami.
 - Antek: ulubiona czapka, czarne trampki.
-- Olek: kapelusz bucket lub czapka z daszkiem, czarne trampki, kieszenie pełne skarbów (kamyki, patyczki, kapsle, piórka).
+- Olek: kieszenie pełne skarbów (kamyki, patyczki, kapsle, piórka). Kapelusz bucket lub czapka z daszkiem są w karcie od autorki, ale kanon wyglądu jest bez nakrycia głowy.
 - Zuzia: dwa warkoczyki, kolorowe spinki po obu stronach, biała kotka Luna (ragdoll, niebieskie oczy), różowe trampki w truskawki.
 
 ## Świat wokół postaci
